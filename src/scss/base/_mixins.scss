@@ -1,4 +1,5 @@
 @use 'variables' as v;
+@use 'sass:color';
 
 @mixin telefono{
     @media (min-width: v.$telefono) {
@@ -36,8 +37,20 @@
     gap: $gap;
 }
 
-// @mixin resetear-lista{
-//     margin: 0;
-//     padding: 0;
-//     list-style: none;
-// }
+@mixin boton($colorPri, $colorSec, $display){
+    background-color: $colorPri;
+    color: $colorSec;
+    font-weight: 400;
+    text-decoration: none;
+    padding: 1rem 3rem;
+    text-align: center;
+    margin-top: 2.5rem;
+    border-radius: 1rem;
+    display: $display;
+    transition: transform 0.3s ease;
+
+    &:hover{
+        background-color: color.adjust($colorPri, $lightness: -5%);
+        transform: scale(1.1);
+    }
+}

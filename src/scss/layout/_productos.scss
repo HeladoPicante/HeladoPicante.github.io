@@ -1,0 +1,83 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+@use 'sass:color';
+
+#productos{
+    background-color: v.$azul;
+    color: v.$blanco;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    button{
+        @include m.boton(v.$blanco, v.$azul, block);
+    }
+}
+
+.productos{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+
+    @include m.tablet{
+        flex-direction: row;
+        gap: 5rem;
+    }
+    .producto{
+        display: flex;
+        padding: 5rem 0;
+        gap: 5rem;
+
+        @include m.tablet{
+            flex-direction: column;
+        }
+
+        img{
+            width: 20rem;
+            height: 12rem;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 50rem 50rem;
+
+            @include m.tablet{
+                width: 25rem;
+                height: 16rem;
+            }
+
+            @include m.desktop{
+                width: 32rem;
+                height: 20rem;
+            }
+        }
+    }
+}
+
+
+.informacion-producto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+
+    @include m.tablet{
+        align-items: center;
+    }
+    a{
+        color: v.$blanco;
+        text-transform: uppercase;
+        font-size: 1.8rem;
+
+        &:hover{
+            color: v.$amarillo;
+            font-weight: 600;
+        }
+    }
+
+    h3{
+        text-align: left;
+        font-weight: 400;
+        font-size: 2.4rem;
+        margin-bottom: 0;
+    }
+}

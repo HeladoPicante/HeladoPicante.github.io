@@ -1,0 +1,52 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+@use 'sass:color';
+
+
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    padding: 4rem;
+    gap: 5rem;
+    align-items: center;
+    margin: 10rem auto;
+
+    @include m.tablet{
+        flex-direction: row;
+    }
+}
+
+.contenedor-img::before{
+    content: "";
+    position: absolute;
+    bottom: 5rem;
+    left: -5rem;
+    width: 100%;
+    height: 100%;
+    background-color: v.$hueso;
+    z-index: 1;
+}
+
+.reves{
+    @include m.tablet{
+        flex-direction: row-reverse;
+    }
+
+    .contenedor-img::before{
+        bottom: 5rem;
+        left: 5rem;
+        background-color: v.$azul;
+    }
+}
+
+.contenedor-img{
+    position: relative;
+    margin: 0 5rem;
+
+    img{
+        display: block;
+        width: 100%;
+        position: relative;
+        z-index: 2;
+    }
+}
