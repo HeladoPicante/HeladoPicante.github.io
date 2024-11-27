@@ -1,39 +1,39 @@
-@use 'base/variables' as v;
-@use 'base/mixins' as m;
-@use 'sass:color';
+// @use 'base/variables' as v;
+// @use 'base/mixins' as m;
+// @use 'sass:color';
 
-html{
-    overflow-x: hidden;
-}
+// html{
+//     overflow-x: hidden;
+// }
 
-.cuadro-amarillo, .cuadro-azul, .cuadro-veige{
-    position: absolute;
-    z-index: -2;
-    // padding: 13rem;
-    // width: 100vw;
-}
+// .cuadro-amarillo, .cuadro-azul, .cuadro-veige{
+//     position: absolute;
+//     z-index: -2;
+//     // padding: 13rem;
+//     // width: 100vw;
+// }
 
-.cuadro-amarillo{
-    background-color: v.$amarillo;
-    padding: 7rem;
-    right: -10rem;
-    top: 52rem;
-    width: 100vw;
-    @include m.tablet{
-        width: 50vw;
-        padding: 10rem;
-        top: 50rem;
-    }
+// .cuadro-amarillo{
+//     background-color: v.$amarillo;
+//     padding: 7rem;
+//     right: -10rem;
+//     top: 52rem;
+//     width: 100vw;
+//     @include m.tablet{
+//         width: 50vw;
+//         padding: 10rem;
+//         top: 50rem;
+//     }
 
-    @include m.desktop{
-        width: 40vw;
-    }
-}
+//     @include m.desktop{
+//         width: 40vw;
+//     }
+// }
 
-.cuadro-veige{
-    background-color: v.$hueso;
-}
+// .cuadro-veige{
+//     background-color: v.$hueso;
+// }
 
-.cuadro-azul{
-    background-color: v.$azul;
-}
+// .cuadro-azul{
+//     background-color: v.$azul;
+// }

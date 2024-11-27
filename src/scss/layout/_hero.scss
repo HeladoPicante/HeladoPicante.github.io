@@ -5,8 +5,8 @@
 .hero{
     padding: 5rem;
     margin-bottom: 5rem;
+    min-height: 70vh;
     @include m.tablet{
-        min-height: 60vh;
         display: flex;
         justify-content: space-evenly;
         align-items: center;
@@ -45,16 +45,16 @@
     }
 }
 
-.imagen-y-logo{
-    display: flex;
-    background-image: url();
-    justify-content: center;
+.img-logo{
+    position: relative;
+    // margin: 0 5rem;
 
     .logo{
-        height: 20rem;
         width: 20rem;
         box-shadow: v.$sombraArriba;
         border-radius: 100%;
+        z-index: 1;
+        margin: 0 auto;
 
         @include m.tablet{
             box-shadow: v.$sombraAbajo;
@@ -62,26 +62,37 @@
     }
 }
 
-.img-pila-ropa{
-    display: none;
-    z-index: -1;
+.img-logo::before{
+    content: "";
     position: absolute;
-    top: 22%;
+    width: 1500%;
+    height: 60%;
+    background-color: v.$amarillo;
+    z-index: -3;
+    left: -3rem;
+    bottom: -3rem;
 
-    // @include m.tablet{
-    //     display: block;
-    //     right: -20;
-    // }
+    @include m.tablet{
+        bottom: -15rem;
+    }
+}
+
+.img-ropa::before{
+    display: none;
+    content: "";
+    position: absolute;
+    top: -10rem;
+    left: 10rem;
+    width: 60rem;
+    height: 40rem;
+    background-image: url(../img/ropa-doblada.webp);
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+    z-index: -2;
 
     @include m.tablet{
         display: block;
-        right: -10rem;
     }
 
-    img{
-        width: 30vw;
-        height: 45rem;
-        max-height: 45vh;
-        object-fit: cover;
-    }
 }

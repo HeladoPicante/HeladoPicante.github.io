@@ -3,7 +3,8 @@
 @use 'sass:color';
 
 .iconos-nosotros{
-    margin: 5rem 0;
+    max-width: 120rem;
+    margin: 5rem auto;
     @include m.tablet{
         @include m.grid(4, 0);
 

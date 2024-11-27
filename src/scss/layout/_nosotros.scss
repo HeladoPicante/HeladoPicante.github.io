@@ -1,0 +1,65 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+@use 'sass:color';
+
+#nosotros{
+    padding-top: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+
+    .contenedor{
+        display: flex;
+        flex-direction: column-reverse;
+
+        @include m.tablet{
+            flex-direction: row;
+        }
+
+        h2{
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+.contenedor-mision{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5rem;
+
+    img{
+        width: 15rem;
+        height: 20rem;
+        align-self: flex-end;
+        border-radius: 0rem 0rem 50rem 50rem;
+        object-fit: cover;
+    }
+
+    @include m.tablet{
+        img{
+            width: 30rem;
+            height: 50rem;
+            align-self: self-start;
+        }
+    }
+}
+
+.contenedor-vision{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5rem;
+
+    img{
+        display: none;
+        max-width: none;
+        width: 45rem;
+        height: 30rem;
+        object-fit: cover;
+
+        @include m.tablet{
+            display: block;
+        }
+    }
+}

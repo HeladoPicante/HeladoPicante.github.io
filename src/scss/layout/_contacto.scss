@@ -1,0 +1,63 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+@use 'sass:color';
+
+#contacto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .img-contacto{
+        position: relative;
+        
+        img{
+            z-index: -1;
+            margin: 0 auto;
+        }
+    }
+    
+    .img-contacto::before{
+        content: "";
+        position: absolute;
+        width: 1500%;
+        height: 70%;
+        background-color: v.$amarillo;
+        z-index: -2;
+        left: -100rem;
+        top: -2rem;
+    }
+
+    .contacto{
+        
+    padding: 4rem;
+        .boton-contacto{
+            @include m.boton(v.$azul, v.$blanco, block);
+        }
+    }
+
+    @include m.desktop{
+        display: none;
+    }
+}
+
+.contacto-info{
+    h4{
+        font-size: 2.2rem
+    }
+}
+
+.redes{
+    width: 30rem;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2.2rem;
+
+    img{
+        width: 5rem;
+        transition: transform 0.3s ease;
+
+        &:hover{
+            transform: scale(1.2);
+        }
+    }
+}
