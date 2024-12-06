@@ -32,6 +32,7 @@
     background-color: rgba($color: #000000, $alpha: 0.5);
     display: grid;
     place-items: center;
+    z-index: 4;
 
     // ANIMATION PARA USAR LOS KEYFRAMES
     animation: fadeIn ease-in 0.5s;

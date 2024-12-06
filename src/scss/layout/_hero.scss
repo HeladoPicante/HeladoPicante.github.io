@@ -2,7 +2,7 @@
 @use 'base/mixins' as m;
 @use 'sass:color';
 
-.hero{
+.hero-index{
     padding: 5rem;
     margin-bottom: 5rem;
     min-height: 70vh;
@@ -77,6 +77,10 @@
     }
 }
 
+.no-webp .img-ropa::before{
+    background-image: url(../img/ropa-doblada.jpg);
+}
+
 .img-ropa::before{
     display: none;
     content: "";
@@ -94,5 +98,90 @@
     @include m.tablet{
         display: block;
     }
+}
 
+.hero-galeria{
+    position: relative;
+    z-index: 1;
+    margin: 0 auto;
+    background-image: url(../img/ropa-doblada.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+    @include m.tablet{
+        min-height: 55rem;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        padding: 10rem 0;
+    }
+    
+    h1{
+        font-weight: v.$black;
+        padding: 2rem;
+        
+        @include m.tablet{
+            background-color: v.$amarillo;
+            width: 60rem;
+        }
+
+        span{
+            color: v.$azul;
+        }
+    }
+
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color: #fff, $alpha: 0.7);
+        z-index: -1;
+    }
+
+    .estadisticas{
+        margin: 0 auto;
+        @include m.grid(2, 0rem);
+        grid-template-rows: 2;
+
+        @include m.tablet{
+            @include m.grid(3, 0rem);
+        }
+        
+        .estadistica{
+            display: flex;
+            flex-direction: column;
+            padding: 2rem 2rem;
+            align-items: start;
+            margin-left: 0;
+            
+            &:first-of-type{
+                border-right: v.$negro 4px solid;
+            }
+            
+            @include m.tablet{
+                border-right: v.$negro 4px solid;
+                padding: 2rem 5rem;
+            }
+
+            &:last-of-type{
+                border-right: 0;
+                grid-column: span 2;
+                margin: 0 auto;
+
+                @include m.tablet{
+                    grid-column: auto;
+                }
+            }
+
+            h3{
+                font-size: 2.4rem;
+                margin: 0;
+            }
+        }
+    }
 }

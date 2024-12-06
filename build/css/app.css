@@ -8,6 +8,7 @@
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
+  -webkit-backface-visibility: hidden;
 }
 
 /* Sections
@@ -312,6 +313,7 @@ html {
   box-sizing: border-box;
   scroll-padding-top: 0rem;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -385,7 +387,7 @@ header {
   padding: 1.5rem 3rem;
 }
 header .logo {
-  height: 5rem;
+  height: 4rem;
   width: auto;
 }
 
@@ -399,8 +401,13 @@ header .logo {
   .navegacion-principal {
     display: flex;
     align-items: center;
-    gap: 4rem;
+    gap: 2rem;
     flex-direction: row;
+  }
+}
+@media (min-width: 1200px) {
+  .navegacion-principal {
+    gap: 5rem;
   }
 }
 .navegacion-principal a {
@@ -435,43 +442,43 @@ header .logo {
   flex-direction: column;
 }
 
-.hero {
+.hero-index {
   padding: 5rem;
   margin-bottom: 5rem;
   min-height: 70vh;
 }
 @media (min-width: 768px) {
-  .hero {
+  .hero-index {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
   }
 }
-.hero .overlay {
+.hero-index .overlay {
   color: #333;
   margin-bottom: 5rem;
 }
 @media (min-width: 768px) {
-  .hero .overlay {
+  .hero-index .overlay {
     max-width: 40vw;
     margin-bottom: 0;
   }
 }
-.hero .overlay h2 {
+.hero-index .overlay h2 {
   color: #325D7E;
   text-transform: uppercase;
   font-size: small;
   font-weight: 500;
   margin-bottom: 3rem;
 }
-.hero .overlay h1 {
+.hero-index .overlay h1 {
   font-size: 4rem;
   margin-bottom: 2.8rem;
 }
-.hero .overlay h1 span {
+.hero-index .overlay h1 span {
   color: #325D7E;
 }
-.hero .overlay p {
+.hero-index .overlay p {
   margin: 0;
   font-size: 1.8rem;
 }
@@ -508,6 +515,10 @@ header .logo {
   }
 }
 
+.no-webp .img-ropa::before {
+  background-image: url(../img/ropa-doblada.jpg);
+}
+
 .img-ropa::before {
   display: none;
   content: "";
@@ -526,6 +537,93 @@ header .logo {
   .img-ropa::before {
     display: block;
   }
+}
+
+.hero-galeria {
+  position: relative;
+  z-index: 1;
+  margin: 0 auto;
+  background-image: url(../img/ropa-doblada.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+@media (min-width: 768px) {
+  .hero-galeria {
+    min-height: 55rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    padding: 10rem 0;
+  }
+}
+.hero-galeria h1 {
+  font-weight: 900;
+  padding: 2rem;
+}
+@media (min-width: 768px) {
+  .hero-galeria h1 {
+    background-color: #FCD406;
+    width: 60rem;
+  }
+}
+.hero-galeria h1 span {
+  color: #325D7E;
+}
+.hero-galeria::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.7);
+  z-index: -1;
+}
+.hero-galeria .estadisticas {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0rem;
+  grid-template-rows: 2;
+}
+@media (min-width: 768px) {
+  .hero-galeria .estadisticas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0rem;
+  }
+}
+.hero-galeria .estadisticas .estadistica {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 2rem;
+  align-items: start;
+  margin-left: 0;
+}
+.hero-galeria .estadisticas .estadistica:first-of-type {
+  border-right: #333 4px solid;
+}
+@media (min-width: 768px) {
+  .hero-galeria .estadisticas .estadistica {
+    border-right: #333 4px solid;
+    padding: 2rem 5rem;
+  }
+}
+.hero-galeria .estadisticas .estadistica:last-of-type {
+  border-right: 0;
+  grid-column: span 2;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .hero-galeria .estadisticas .estadistica:last-of-type {
+    grid-column: auto;
+  }
+}
+.hero-galeria .estadisticas .estadistica h3 {
+  font-size: 2.4rem;
+  margin: 0;
 }
 
 .iconos-nosotros {
@@ -562,6 +660,9 @@ header .logo {
 .icono a {
   text-transform: uppercase;
   font-size: 1.4rem;
+}
+.icono a:visited {
+  color: #325D7E;
 }
 
 .contenedor-info {
@@ -634,6 +735,9 @@ header .logo {
   background-color: rgb(255, 255, 214.5);
   transform: scale(1.1);
 }
+#productos button a:visited {
+  color: #325D7E;
+}
 
 .productos {
   display: flex;
@@ -651,6 +755,7 @@ header .logo {
   display: flex;
   padding: 5rem 0;
   gap: 5rem;
+  transition: transform 0.3s ease;
 }
 @media (min-width: 768px) {
   .productos .producto {
@@ -676,6 +781,9 @@ header .logo {
     height: 20rem;
   }
 }
+.productos .producto:hover {
+  transform: scale(1.1);
+}
 
 .informacion-producto {
   display: flex;
@@ -696,12 +804,64 @@ header .logo {
 .informacion-producto a:hover {
   color: #FCD406;
   font-weight: 600;
+  cursor: pointer;
 }
 .informacion-producto h3 {
   text-align: left;
   font-weight: 400;
   font-size: 2.4rem;
   margin-bottom: 0;
+}
+
+.producto-flip {
+  width: 20rem;
+  height: 12rem;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50rem 50rem;
+  position: relative;
+}
+@media (min-width: 768px) {
+  .producto-flip {
+    width: 25rem;
+    height: 16rem;
+  }
+}
+@media (min-width: 1200px) {
+  .producto-flip {
+    width: 32rem;
+    height: 20rem;
+  }
+}
+.producto-flip .flip {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease;
+}
+.producto-flip .producto-front, .producto-flip .producto-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+.producto-flip .producto-back {
+  background-color: #FCD406;
+  color: #333;
+  transform: rotateY(180deg);
+  border-radius: 50rem 50rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.producto-flip .producto-back p {
+  margin: 0;
+}
+
+.producto.flipped .flip {
+  transform: rotateY(180deg);
 }
 
 #nosotros {
@@ -826,4 +986,168 @@ header .logo {
 }
 .redes img:hover {
   transform: scale(1.2);
+}
+
+.footer {
+  justify-content: center;
+  padding: 5rem;
+}
+.footer .footer-contenedor {
+  display: none;
+}
+@media (min-width: 1200px) {
+  .footer {
+    background-color: #FFFFF0;
+  }
+  .footer .footer-contenedor {
+    display: flex;
+    padding: 5rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5rem;
+  }
+}
+
+.footer-info {
+  margin: 0 auto;
+}
+.footer-info .footer-logo {
+  width: 30rem;
+  margin-bottom: 2.2rem;
+}
+
+.informacion a {
+  display: flex;
+  gap: 2.2rem;
+  justify-content: flex-start;
+  align-items: center;
+}
+.informacion a img {
+  width: 4rem;
+  transition: transform 0.3s ease-in-out;
+}
+.informacion a:hover {
+  transform: scale(1.1);
+}
+
+.footer-form {
+  margin: 0 auto;
+  width: 40rem;
+}
+.footer-form .form {
+  display: inline;
+}
+.footer-form .form input {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  width: calc(100% - 1rem);
+  margin: 0.5rem 0;
+}
+.footer-form button {
+  margin: 0 auto;
+  background-color: #333;
+  color: #FFFFF0;
+  font-weight: 400;
+  text-decoration: none;
+  padding: 2rem 3rem;
+  text-align: center;
+  margin-top: 2.5rem;
+  border-radius: 1rem;
+  display: block;
+  transition: transform 0.3s ease;
+}
+.footer-form button:hover {
+  background-color: rgb(38.25, 38.25, 38.25);
+  transform: scale(1.1);
+}
+
+#nombre, #apellido {
+  width: calc(50% - 1rem);
+  margin: 0.5rem;
+}
+
+#nombre, #apellido {
+  margin-left: 0;
+}
+
+.galeria {
+  width: 95%;
+  max-width: 120rem;
+  margin: 0 auto;
+}
+.galeria-imagenes {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+}
+@media (min-width: 480px) {
+  .galeria-imagenes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+@media (min-width: 768px) {
+  .galeria-imagenes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+@media (min-width: 1200px) {
+  .galeria-imagenes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+}
+.galeria-imagenes img {
+  height: 20rem;
+  object-fit: cover;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: grid;
+  place-items: center;
+  z-index: 4;
+  animation: fadeIn ease-in 0.5s;
+}
+.modal.fade-out {
+  animation: fadeOut ease-in 0.5s;
+}
+.modal img {
+  max-width: 100rem;
+}
+
+.btn-cerrar {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: #FFFFF0;
+  border: none;
+  color: #333;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }/*# sourceMappingURL=app.css.map */

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="build/css/app.css">
+</head>
+<body>
+    <header>
+        <a href="/">
+            <img class="logo" src="src/img/Logo-prodisa_01-03.png" alt="Logo de Prodisa">
+        </a>
+        <div class="navegacion">
+            <button class="burger">
+                <img src="src/img/burger-button.svg" alt="abrir menú">
+            </button>
+            <nav class="navegacion-principal">
+                <a href="/">Inicio</a>
+                <a href="#productos" class="activo">Productos</a>
+                <a href="#nosotros">Nosotros</a>
+                <a href="#footer">Contáctanos</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="hero-galeria">
+        <h1>Algunos de nuestro trabajos para <span>empresas</span> de Honduras</h1>
+
+        <div class="estadisticas">
+            <div class="estadistica">
+                <h3>25+</h3>
+                <p>Empresas felices</p>
+            </div>
+            <div class="estadistica">
+                <h3>35,000+</h3>
+                <p>Usuarios felices</p>
+            </div>
+            <div class="estadistica">
+                <h3>100+</h3>
+                <p>Productos personalizados</p>
+            </div>
+        </div>
+    </div>
+
+    <main class="galeria">
+        <h2>Galeria</h2>
+
+        <ul class="galeria-imagenes"></ul>
+    </main>
+
+    <footer class="footer" id="footer">
+        <div class="footer-contenedor">
+
+            <div class="footer-info">
+                <img class="footer-logo" src="src/img/Logo-prodisa_01-03.png" alt="Prodisa">
+                <div class="informacion">
+                    <a href="https://maps.app.goo.gl/kR3HKnfHfcVGruXT9" target="_blank">
+                        <img src="src/img/icons/ubicacion-b.svg" alt="ubicación">
+                        <p>Kennedy TGU</p>
+                    <a href="mailto:agaray@prodisahn.com">
+                        <img src="src/img/icons/mail-b.svg" alt="correo">
+                        <p>agaray@prodisahn.com</p>
+                    <a href="https://wa.me/92003852">
+                        <img src="src/img/icons/whatsapp-b.svg" alt="whatsapp">
+                        <p>+504 9872-2078</p>
+                    <a href="https://www.facebook.com/PordisaCA/?locale=es_LA" target="_blank">
+                        <img src="src/img/icons/facebook-b.svg" alt="facebook">
+                        <p>PRODISA</p>
+                    </a>
+                </div>
+            </div>
+    
+            <div class="footer-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3870.2757762587007!2d-87.18123662519018!3d14.060885790062992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6fbd3300735a07%3A0xce400539d61dd3f4!2sPRODISA!5e0!3m2!1ses-419!2shn!4v1733076539890!5m2!1ses-419!2shn" width="450" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+    
+            <div class="footer-form">
+                <form action="#" method="post">
+                    <div class="form">
+                        <!-- <label for="nombre">Nombre</label> -->
+                        <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+                    </div>
+                    <div class="form">
+                        <!-- <label for="apellido">Apellido</label> -->
+                        <input type="text" id="apellido" name="apellido" placeholder="Apellido" required>
+                    </div>
+                    <div class="form">
+                        <input type="email" id="correo" name="correo" placeholder="Correo" required>
+                    </div>
+                    <div class="form">
+                        <input type="tel" id="telefono" name="telefono" placeholder="Teléfono" required>
+                    </div>
+                    <button type="submit">Enviar Solicitud</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+
+    <script src="build/js/app.js"></script>
+
+</body>
+</html>
