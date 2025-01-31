@@ -31,34 +31,44 @@ export function css( done ) {
 
 //minificar imagenes
 export async function crop(done) {
-    const inputFolder = 'src/img/gallery/full'
-    const outputFolder = 'src/img/gallery/thumb';
+    const inputFolder = 'build/img/gallery/**/full'; // Carpeta donde están las imágenes originales
+    const outputBaseFolder = 'build/img/gallery';   // Base donde estarán las imágenes miniaturizadas
     const width = 250;
     const height = 180;
-    if (!fs.existsSync(outputFolder)) {
-        fs.mkdirSync(outputFolder, { recursive: true })
-    }
-    const images = fs.readdirSync(inputFolder).filter(file => {
-        return /\.(jpg)$/i.test(path.extname(file));
-    });
+
     try {
+        // Usamos glob para obtener todas las imágenes en las subcarpetas `full`
+        const images = await glob(`${inputFolder}/*.{jpg,png}`); // Asegura que sólo procesa imágenes
+
         images.forEach(file => {
-            const inputFile = path.join(inputFolder, file)
-            const outputFile = path.join(outputFolder, file)
-            sharp(inputFile) 
-                .resize(width, height, {
-                    position: 'centre'
-                })
+            const relativePath = path.relative('build/img/gallery', file); // Obtén el path relativo desde la raíz
+            const subDir = path.dirname(relativePath).replace('full', 'thumb'); // Cambia `full` por `thumb`
+            const outputDir = path.join(outputBaseFolder, subDir); // Carpeta donde se guardará la imagen
+
+            // Asegúrate de que la carpeta `thumb` exista
+            if (!fs.existsSync(outputDir)) {
+                fs.mkdirSync(outputDir, { recursive: true });
+            }
+
+            const fileName = path.basename(file); // Obtiene el nombre del archivo (ejemplo: imagen.jpg)
+            const outputFile = path.join(outputDir, fileName); // Ruta completa del archivo procesado
+
+            // Procesar la imagen con Sharp
+            sharp(file)
+                .resize(width, height, { position: 'centre' }) // Resize con ajuste centrado
                 .toFile(outputFile)
+                .then(() => {
+                    console.log(`Procesada: ${outputFile}`);
+                })
+                .catch(err => console.error(`Error al procesar ${file}:`, err));
         });
 
-        done()
+        done();
     } catch (error) {
-        console.log(error)
+        console.error('Error en el proceso de crop:', error);
+        done(error);
     }
 }
-
-
 export async function imagenes(done) {
     const srcDir = './src/img';
     const buildDir = './build/img';
@@ -95,3 +105,4 @@ export function dev() {
 }
 
 export default series( crop, js, css, imagenes, dev )
+// export default series( js, css, imagenes, dev )

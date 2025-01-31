@@ -1,8 +1,9 @@
 document.addEventListener('DOMContentLoaded', function(){
     desplegarNavegacion()
+    selecionarCategoria()
     flipImg()
-
-    crearGeleria()
+    crearGaleria()
+    configurarCategorias()
 })
 
 function desplegarNavegacion() {
@@ -33,42 +34,79 @@ function flipImg(){
     })
 }
 
-function crearGeleria() {
-    const CANT_IMG = 16
-    const geleria = document.querySelector('.galeria-imagenes')
+function crearGaleria(categoriaActual = 'todos') {
+    const galeria = document.querySelector('.galeria-imagenes')
+    const categorias = {
+        'camisas': 0,
+        'camisetas': 5,
+        'chalecos': 5,
+        'overol': 6,
+        'uniformes': 6,
+    }
 
-    for (let i = 1; i <= CANT_IMG; i++) {
-        // const imagen = document.createElement('IMG')
-        // imagen.loading = 'lazy'
-        // imagen.with = '300'
-        // imagen.height = '200'
-        // imagen.src = `src/img/gallery/thumb/${i}.jpg`
-        // imagen.alt = 'Imagen de galería'
-        const imagen = document.createElement('PICTURE')
-        imagen.innerHTML = `
-            <source srcset="build/img/gallery/thumb/${i}.avif" type="image/avif">
-            <source srcset="build/img/gallery/thumb/${i}.webp" type="image/webp">
-            <img loading="lazy" width="200" height="300" src="build/img/gallery/thumb/${i}.jpg" alt="imagen galeria">
-        `;
+    // categorias.forEach(categoria => {
+    //     console.log(categoria);
+        
+    // })
 
-        // EVENT HANDLER
-        imagen.onclick = function(){
-            mostrarImagen(i)
+    galeria.innerHTML = ''
+    if(categoriaActual === 'todos'){
+        Object.keys(categorias).forEach(categoria => {
+            agregarImagenes(categoria, galeria, categorias[categoria])
+            
+        })
+    }else{
+
+        if(categorias[categoriaActual] === 0){
+            galeria.innerHTML = `
+                <p class="no-hay-imagenes">No hay imágenes disponibles</p>
+            `
         }
-
-        geleria.appendChild(imagen)
+        agregarImagenes(categoriaActual, galeria, categorias[categoriaActual])
     }
 }
 
-function mostrarImagen(i) {
+function agregarImagenes(categoriaActual, galeria, cantImgs) {
+    for(let i = 1; i <= cantImgs; i++){
+        const imagen = document.createElement('PICTURE');
+        const rutaBase = `build/img/gallery/${categoriaActual}/thumb/${i}`;
+        imagen.innerHTML = `
+            <source srcset="${rutaBase}.avif" type="image/avif">
+            <source srcset="${rutaBase}.webp" type="image/webp">
+            <img loading="lazy" width="200" height="300" src="${rutaBase}.jpg" alt="imagen ${categoriaActual}">
+        `;
+
+        // EVENT HANDLER
+        imagen.onclick = function () {
+            mostrarImagen(i, categoriaActual);
+        };
+        
+        
+        galeria.appendChild(imagen);
+        
+    }
+}
+
+function configurarCategorias() {
+    const categorias = document.querySelectorAll('.categoria');
+
+    categorias.forEach(categoria => {
+        categoria.addEventListener('click', () => {
+            const categoriaActual = categoria.dataset.categoria;
+            crearGaleria(categoriaActual);
+        });
+    });
+}
+
+function mostrarImagen(i, categoriaActual) {
     // const imagen = document.createElement('IMG')
     // imagen.src = `src/img/gallery/full/${i}.jpg`
     // imagen.alt = 'Imagen de galería'
     const imagen = document.createElement('PICTURE')
     imagen.innerHTML = `
-    <source srcset="build/img/gallery/full/${i}.avif" type="image/avif">
-    <source srcset="build/img/gallery/full/${i}.webp" type="image/webp">
-    <img loading="lazy" width="200" height="300" src="build/img/gallery/full/${i}.jpg" alt="imagen galeria">
+    <source srcset="build/img/gallery/${categoriaActual}/full/${i}.avif" type="image/avif">
+    <source srcset="build/img/gallery/${categoriaActual}/full/${i}.webp" type="image/webp">
+    <img loading="lazy" width="200" height="300" src="build/img/gallery/${categoriaActual}/full/${i}.jpg" alt="imagen galeria">
 `;
 
     const modal = document.createElement('DIV')
@@ -85,8 +123,9 @@ function mostrarImagen(i) {
 
     // agregar modal
     const body = document.querySelector('body')
-    body.classList.add('overflow-hidden')
+    const html = document.querySelector('html')
     body.appendChild(modal)
+    html.style.overflow = 'hidden'
 }
 
 function cerrarModal() {
@@ -94,13 +133,34 @@ function cerrarModal() {
     modal.classList.add('fade-out')
 
     setTimeout(() => {
-        // if(modal){
-        //     modal.remove()
-        // }
-    
         modal?.remove()
 
         const body = document.querySelector('body')
-        body.classList.remove('overflow-hidden')
+        const html = document.querySelector('html')
+
+        html.style.overflow = 'auto'
     }, 500);
+}
+
+function selecionarCategoria(){
+    const categorias = document.querySelectorAll('.categoria')
+    const productos = document.querySelectorAll('.producto')
+
+
+    categorias.forEach(categoria => {
+        categoria.addEventListener('click', ()=>{
+            // const categoriaActual = categoria.dataset.categoria
+
+            categorias.forEach(cat => cat.classList.remove('activo'))
+            categoria.classList.toggle('activo')
+
+            // productos.forEach(producto => {
+            //     if(producto.dataset.categoria === categoriaActual || categoriaActual === 'todos'){
+            //         producto.classList.remove('oculto')
+            //     }else{
+            //         producto.classList.add('oculto')
+            //     }
+            // })
+        })
+    })
 }

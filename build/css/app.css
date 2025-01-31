@@ -377,6 +377,10 @@ body > section {
   padding: 10rem 0;
 }
 
+.oculto {
+  display: none;
+}
+
 header {
   background-color: white;
   display: flex;
@@ -388,7 +392,9 @@ header {
 }
 header .logo {
   height: 4rem;
-  width: auto;
+  min-width: 15rem;
+  object-fit: cover;
+  object-position: center;
 }
 
 .navegacion-principal {
@@ -516,7 +522,7 @@ header .logo {
 }
 
 .no-webp .img-ropa::before {
-  background-image: url(../img/ropa-doblada.jpg);
+  background-image: url(../img/util/ropa-doblada.jpg);
 }
 
 .img-ropa::before {
@@ -527,7 +533,7 @@ header .logo {
   left: 10rem;
   width: 60rem;
   height: 40rem;
-  background-image: url(../img/ropa-doblada.webp);
+  background-image: url(../img/util/ropa-doblada.webp);
   background-size: cover;
   background-position-x: center;
   background-position-y: center;
@@ -543,10 +549,11 @@ header .logo {
   position: relative;
   z-index: 1;
   margin: 0 auto;
-  background-image: url(../img/ropa-doblada.webp);
+  background-image: url(../img/util/ropa-doblada.webp);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+  margin-bottom: 10rem;
 }
 @media (min-width: 768px) {
   .hero-galeria {
@@ -1076,6 +1083,7 @@ header .logo {
   margin: 0 auto;
 }
 .galeria-imagenes {
+  padding-left: 0;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 2rem;
@@ -1104,13 +1112,25 @@ header .logo {
 .galeria-imagenes img {
   height: 20rem;
   object-fit: cover;
+  border-radius: 2rem;
+  background-color: #ffffff;
+  border: #FCD406 solid 3px;
+}
+.galeria-imagenes img:hover {
+  transform: scale(1.05);
+  transition: transform 0.5s;
+}
+.galeria h2 {
+  margin: 0 auto;
+  width: fit-content;
+  font-size: 6rem;
 }
 
 .modal {
   position: fixed;
+  display: grid;
   inset: 0;
   background-color: rgba(0, 0, 0, 0.5);
-  display: grid;
   place-items: center;
   z-index: 4;
   animation: fadeIn ease-in 0.5s;
@@ -1119,7 +1139,38 @@ header .logo {
   animation: fadeOut ease-in 0.5s;
 }
 .modal img {
+  max-height: 80vh;
   max-width: 100rem;
+}
+
+.categorias {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  padding: 2rem 0;
+}
+@media (min-width: 1200px) {
+  .categorias {
+    flex-direction: row;
+  }
+}
+.categorias button {
+  background-color: #FCD406;
+  color: #333;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  font-weight: 700;
+}
+.categorias button:hover {
+  background-color: #333;
+  color: #FCD406;
+}
+.categorias .activo {
+  background-color: #333;
+  color: #FCD406;
 }
 
 .btn-cerrar {
@@ -1133,6 +1184,9 @@ header .logo {
   place-items: center;
   font-weight: 700;
   cursor: pointer;
+}
+.btn-cerrar:hover {
+  background-color: #FCD406;
 }
 
 @keyframes fadeIn {
@@ -1150,4 +1204,12 @@ header .logo {
   100% {
     opacity: 0;
   }
+}
+.no-hay-imagenes {
+  background-color: rgb(116, 36, 36);
+  color: white;
+  padding: 1rem;
+  font-weight: bold;
+  width: 50rem;
+  margin: 0 auto;
 }/*# sourceMappingURL=app.css.map */

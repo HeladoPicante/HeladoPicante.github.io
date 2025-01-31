@@ -13,7 +13,9 @@ header{
 
     .logo{
         height: 4rem;
-        width: auto;
+        min-width: 15rem;
+        object-fit: cover;
+        object-position: center;
     }
 }
 

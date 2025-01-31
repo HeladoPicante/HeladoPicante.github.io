@@ -1,4 +1,5 @@
 @use 'variables' as v;
+@use 'mixins' as m;
 
 html {
     font-size: 62.5%;
@@ -20,7 +21,7 @@ body {
     font-size: 2rem;
     
 
-    &.overflow-hidden{
+    &.overflow-hidden {
         overflow: hidden;
     }
 }
@@ -58,4 +59,8 @@ img {
 }
 body > section {
     padding: 10rem 0
+}
+
+.oculto {
+    display: none;
 }
