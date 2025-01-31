@@ -6,3 +6,5 @@ package-lock.json
 
 # Ignorar vídeos y otros archivos grandes
 video/
+
+**/config.js

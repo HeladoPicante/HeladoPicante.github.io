@@ -89,7 +89,7 @@
             </div>
     
             <div class="footer-form">
-                <form action="#" method="post">
+                <form method="post" onsubmit="enviarCorreo(event)">
                     <div class="form">
                         <!-- <label for="nombre">Nombre</label> -->
                         <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
@@ -104,13 +104,40 @@
                     <div class="form">
                         <input type="tel" id="telefono" name="telefono" placeholder="Teléfono" required>
                     </div>
+                    <div class="form">
+                        <textarea type="text" id="mensaje" name="mensaje" placeholder="Mensaje" required></textarea>
+                    </div>
                     <button type="submit">Enviar Solicitud</button>
                 </form>
             </div>
         </div>
     </footer>
-
     <script src="build/js/app.js"></script>
+    <script src="build/js/config.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        (function() {
+        emailjs.init(emailJsConfig.userId); // Inicializa EmailJS con tu Public Key
+    })();
 
+    function enviarCorreo(event) {
+        event.preventDefault(); // Evita que el formulario se envíe de forma tradicional
+
+        const templateParams = {
+            nombre: document.getElementById('nombre').value,
+            apellido: document.getElementById('apellido').value,
+            correo: document.getElementById('correo').value,
+            telefono: document.getElementById('telefono').value,
+            mensaje: document.getElementById('mensaje').value,
+        };
+
+        emailjs.send(emailJsConfig.serviceId, emailJsConfig.templateId, templateParams)
+            .then(function(response) {
+                alert('Correo enviado correctamente');
+            }, function(error) {
+                alert('Error al enviar el correo: ' + error.text);
+            });
+    }
+    </script>
 </body>
 </html>
