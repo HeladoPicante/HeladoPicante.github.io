@@ -266,11 +266,11 @@
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script>
         (function() {
-        emailjs.init(emailJsConfig.userId); // Inicializa EmailJS con tu Public Key
+        emailjs.init(emailJsConfig.userId);
     })();
 
     function enviarCorreo(event) {
-        event.preventDefault(); // Evita que el formulario se envíe de forma tradicional
+        event.preventDefault();
 
         const templateParams = {
             nombre: document.getElementById('nombre').value,
