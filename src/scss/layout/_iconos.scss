@@ -6,6 +6,7 @@
     max-width: 120rem;
     margin: 5rem auto;
     @include m.tablet{
+        //no sé por qué no funciona
         @include m.grid(3, 0);
 
     }
