@@ -640,7 +640,7 @@ header .logo {
 @media (min-width: 768px) {
   .iconos-nosotros {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 0;
   }
 }
@@ -1070,6 +1070,10 @@ header .logo {
 .footer-form button:hover, .m-form button:hover {
   background-color: rgb(38.25, 38.25, 38.25);
   transform: scale(1.1);
+}
+
+.m-form {
+  margin-bottom: 5rem;
 }
 
 #nombre, #apellido {
