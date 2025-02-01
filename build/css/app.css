@@ -328,6 +328,7 @@ body {
   font-style: normal;
   color: #333;
   font-size: 2rem;
+  overflow-x: hidden;
 }
 body.overflow-hidden {
   overflow: hidden;
