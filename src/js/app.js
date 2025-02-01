@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', function(){
     desplegarNavegacion()
+    cambiarEnlaceSegunResolucion()
+    window.addEventListener('resize', cambiarEnlaceSegunResolucion)
     selecionarCategoria()
     flipImg()
     crearGaleria()
@@ -149,18 +151,19 @@ function selecionarCategoria(){
 
     categorias.forEach(categoria => {
         categoria.addEventListener('click', ()=>{
-            // const categoriaActual = categoria.dataset.categoria
 
             categorias.forEach(cat => cat.classList.remove('activo'))
             categoria.classList.toggle('activo')
-
-            // productos.forEach(producto => {
-            //     if(producto.dataset.categoria === categoriaActual || categoriaActual === 'todos'){
-            //         producto.classList.remove('oculto')
-            //     }else{
-            //         producto.classList.add('oculto')
-            //     }
-            // })
         })
     })
+}
+
+function cambiarEnlaceSegunResolucion(){
+    const enlace = document.querySelector('.enlace')
+    
+    if(window.innerWidth <= 768){
+        enlace.setAttribute('href', '#contacto')
+    }else{
+        enlace.setAttribute('href', '#footer')
+    }
 }

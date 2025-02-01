@@ -24,7 +24,7 @@
                 <a href="#inicio" class="activo">Inicio</a>
                 <a href="galeria.html">Productos</a>
                 <!-- <a href="#nosotros">Nosotros</a> -->
-                <a href="#footer">Contáctanos</a>
+                <a href="#contacto" class="enlace">Contáctanos</a>
             </nav>
         </div>
     </header>
@@ -193,7 +193,7 @@
                 <h4>Ponte en contacto</h4>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem ipsa nisi ullam aperiam ratione perspiciatis veritatis atque. Aspernatur sunt enim, veniam quibusdam nisi, dolorem distinctio in voluptates, rerum dolores nihil.</p>
             </div>
-            <button class="boton-contacto">Contacto</button>
+            <!-- <button class="boton-contacto">Contacto</button> -->
             <div class="redes">
                 <a href="https://wa.me/92003852">
                     <img src="build/img/icons/whatsapp.svg" alt="whatsapp">
@@ -204,6 +204,29 @@
                 <a href="mailto:agaray@prodisahn.com">
                     <img src="build/img/icons/mail.svg" alt="correo" target="_blank">
                 </a>
+            </div>
+        </div>
+
+        <div class="modal-form ">
+            <div class="m-form">
+                <form method="post" onsubmit="enviarCorreo(event)">
+                    <div class="form">
+                        <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+                    </div>
+                    <div class="form">
+                        <input type="text" id="apellido" name="apellido" placeholder="Apellido" required>
+                    </div>
+                    <div class="form">
+                        <input type="email" id="correo" name="correo" placeholder="Correo" required>
+                    </div>
+                    <div class="form">
+                        <input type="tel" id="telefono" name="telefono" placeholder="Teléfono" required>
+                    </div>
+                    <div class="form">
+                        <textarea type="text" id="mensaje" name="mensaje" placeholder="Mensaje" required></textarea>
+                    </div>
+                    <button type="submit">Enviar Solicitud</button>
+                </form>
             </div>
         </div>
     </section>
@@ -240,11 +263,9 @@
             <div class="footer-form">
                 <form method="post" onsubmit="enviarCorreo(event)">
                     <div class="form">
-                        <!-- <label for="nombre">Nombre</label> -->
                         <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
                     </div>
                     <div class="form">
-                        <!-- <label for="apellido">Apellido</label> -->
                         <input type="text" id="apellido" name="apellido" placeholder="Apellido" required>
                     </div>
                     <div class="form">
