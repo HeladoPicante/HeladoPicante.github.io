@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function(){
     cambiarEnlaceSegunResolucion()
     window.addEventListener('resize', cambiarEnlaceSegunResolucion)
     // selecionarCategoria()
-    // flipImg()
+    flipImg()
     // crearGaleria()
     // configurarCategorias()
 })
