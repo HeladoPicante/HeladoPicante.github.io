@@ -752,6 +752,7 @@ header .logo {
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
+  width: 80vw;
 }
 @media (min-width: 768px) {
   .productos {
@@ -762,17 +763,17 @@ header .logo {
 .productos .producto {
   display: flex;
   padding: 5rem 0;
-  gap: 5rem;
   transition: transform 0.3s ease;
 }
 @media (min-width: 768px) {
   .productos .producto {
     flex-direction: column;
+    gap: 4rem;
   }
 }
 .productos .producto img {
-  width: 20rem;
   height: 12rem;
+  width: 18rem;
   object-fit: cover;
   object-position: center;
   border-radius: 50rem 50rem;
@@ -817,8 +818,13 @@ header .logo {
 .informacion-producto h3 {
   text-align: left;
   font-weight: 400;
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   margin-bottom: 0;
+}
+@media (min-width: 768px) {
+  .informacion-producto h3 {
+    font-size: 2.6rem;
+  }
 }
 
 .producto-flip {
@@ -863,6 +869,12 @@ header .logo {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  font-size: 1.4rem;
+}
+@media (min-width: 768px) {
+  .producto-flip .producto-back {
+    font-size: 1.6rem;
+  }
 }
 .producto-flip .producto-back p {
   margin: 0;

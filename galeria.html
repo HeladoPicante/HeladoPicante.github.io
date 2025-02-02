@@ -62,6 +62,57 @@
          </div>
     </main>
 
+    <section id="contacto">
+        <div class="img-contacto">
+            <img src="build/img/icons/telefono2.svg" alt="telefono">
+        </div>
+        <div class="contacto contenedor">
+            <div class="contacto-info">
+                <h4>Ponte en contacto</h4>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem ipsa nisi ullam aperiam ratione perspiciatis veritatis atque. Aspernatur sunt enim, veniam quibusdam nisi, dolorem distinctio in voluptates, rerum dolores nihil.</p>
+            </div>
+            <!-- <button class="boton-contacto">Contacto</button> -->
+            <div class="redes">
+                <a href="https://wa.me/92003852">
+                    <img src="build/img/icons/whatsapp.svg" alt="whatsapp">
+                </a>
+                <a href="https://www.facebook.com/PordisaCA/?locale=es_LA" target="_blank" rel="noopener noreferrer">
+                    <img src="build/img/icons/facebook.svg" alt="facebook">
+                </a>
+                <a href="mailto:agaray@prodisahn.com">
+                    <img src="build/img/icons/mail.svg" alt="correo" target="_blank">
+                </a>
+            </div>
+        </div>
+
+        <div class="modal-form ">
+            <div class="m-form">
+                <form method="post" onsubmit="enviarCorreo(event)">
+                    <div class="form">
+                        <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+                    </div>
+                    <div class="form">
+                        <input type="text" id="apellido" name="apellido" placeholder="Apellido" required>
+                    </div>
+                    <div class="form">
+                        <input type="email" id="correo" name="correo" placeholder="Correo" required>
+                    </div>
+                    <div class="form">
+                        <input type="tel" id="telefono" name="telefono" placeholder="Teléfono" required>
+                    </div>
+                    <div class="form">
+                        <textarea type="text" id="mensaje" name="mensaje" placeholder="Mensaje" required></textarea>
+                    </div>
+                    <button type="submit">Enviar Solicitud</button>
+                </form>
+            </div>
+
+            <div class="footer-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3870.2757762587007!2d-87.18123662519018!3d14.060885790062992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6fbd3300735a07%3A0xce400539d61dd3f4!2sPRODISA!5e0!3m2!1ses-419!2shn!4v1733076539890!5m2!1ses-419!2shn" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
     <footer class="footer" id="footer">
         <div class="footer-contenedor">
 
