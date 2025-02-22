@@ -37,11 +37,21 @@ function flipImg(){
 }
 
 function cambiarEnlaceSegunResolucion(){
-    const enlace = document.querySelector('.enlace')
+    // const enlaces = document.querySelector('.enlace')
     
-    if(window.innerWidth <= 768){
-        enlace.setAttribute('href', '#contacto')
-    }else{
-        enlace.setAttribute('href', '#footer')
-    }
+    // if(window.innerWidth <= 768){
+    //     enlace.setAttribute('href', '#contacto')
+    // }if(window.innerWidth > 768){
+    //     enlace.setAttribute('href', '#footer')
+    // }
+
+    const enlaces = document.querySelectorAll('.enlace')
+
+    enlaces.forEach(enlace => {
+        if(window.innerWidth < 768){
+            enlace.setAttribute('href', '#contacto')
+        } else {
+            enlace.setAttribute('href', '#footer')
+        }
+    })
 }
