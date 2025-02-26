@@ -77,9 +77,17 @@
     }
 }
 
-.no-webp .img-ropa::before{
+.no-webp .no-avif .img-ropa::before{
     background-image: url(../img/util/ropa-doblada.jpg);
 }
+
+.webp .img-ropa::before{
+    background-image: url(../img/util/ropa-doblada.webp);
+}
+.avif .img-ropa::before{
+    background-image: url(../img/util/ropa-doblada.avif);
+}
+
 
 .img-ropa::before{
     display: none;
@@ -91,8 +99,7 @@
     height: 40rem;
     background-image: url(../img/util/ropa-doblada.webp);
     background-size: cover;
-    background-position-x: center;
-    background-position-y: center;
+    background-position: center;
     z-index: -2;
 
     @include m.tablet{

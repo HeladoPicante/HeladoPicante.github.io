@@ -22,11 +22,15 @@
 
 
         img{
-            height: 20rem;
-            object-fit: cover;
+            height: 100%;
             border-radius: 2rem;
             background-color: #ffffff;
             border: v.$amarillo solid 3px;
+
+            @include m.tablet{
+                height: 20rem;
+                object-fit: cover;
+            }
 
             &:hover{
                 transform: scale(1.05);

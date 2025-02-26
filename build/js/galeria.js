@@ -38,11 +38,14 @@ function crearGaleria(categoriaActual = 'todos') {
 function agregarImagenes(categoriaActual, galeria, cantImgs) {
     for(let i = 1; i <= cantImgs; i++){
         const imagen = document.createElement('PICTURE');
-        const rutaBase = `build/img/gallery/${categoriaActual}/thumb/${i}`;
+        const rutaBase = `build/img/gallery/${categoriaActual}`;
+        
         imagen.innerHTML = `
-            <source srcset="${rutaBase}.avif" type="image/avif">
-            <source srcset="${rutaBase}.webp" type="image/webp">
-            <img loading="lazy" width="200" height="300" src="${rutaBase}.jpg" alt="imagen ${categoriaActual}">
+            <source srcset="${rutaBase}/full/${i}.avif" type="image/avif" media="(max-width: 768px)">
+            <source srcset="${rutaBase}/full/${i}.webp" type="image/webp" media="(max-width: 768px)">
+            <source srcset="${rutaBase}/thumb/${i}.avif" type="image/avif">
+            <source srcset="${rutaBase}/thumb/${i}.webp" type="image/webp">
+            <img loading="lazy" width="200" height="300" src="${rutaBase}/thumb/${i}.jpg" alt="imagen ${categoriaActual}">
         `;
 
         // EVENT HANDLER
@@ -50,11 +53,10 @@ function agregarImagenes(categoriaActual, galeria, cantImgs) {
             mostrarImagen(i, categoriaActual);
         };
         
-        
         galeria.appendChild(imagen);
-        
     }
 }
+
 
 function configurarCategorias() {
     const categorias = document.querySelectorAll('.categoria');

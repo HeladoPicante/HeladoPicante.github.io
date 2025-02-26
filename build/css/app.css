@@ -522,8 +522,16 @@ header .logo {
   }
 }
 
-.no-webp .img-ropa::before {
+.no-webp .no-avif .img-ropa::before {
   background-image: url(../img/util/ropa-doblada.jpg);
+}
+
+.webp .img-ropa::before {
+  background-image: url(../img/util/ropa-doblada.webp);
+}
+
+.avif .img-ropa::before {
+  background-image: url(../img/util/ropa-doblada.avif);
 }
 
 .img-ropa::before {
@@ -536,8 +544,7 @@ header .logo {
   height: 40rem;
   background-image: url(../img/util/ropa-doblada.webp);
   background-size: cover;
-  background-position-x: center;
-  background-position-y: center;
+  background-position: center;
   z-index: -2;
 }
 @media (min-width: 768px) {
@@ -935,7 +942,8 @@ header .logo {
   align-items: center;
   gap: 5rem;
 }
-.contenedor-mision img {
+.contenedor-mision picture img {
+  max-width: none;
   width: 15rem;
   height: 20rem;
   align-self: flex-end;
@@ -943,7 +951,8 @@ header .logo {
   object-fit: cover;
 }
 @media (min-width: 768px) {
-  .contenedor-mision img {
+  .contenedor-mision picture img {
+    max-width: none;
     width: 30rem;
     height: 50rem;
     align-self: self-start;
@@ -1157,11 +1166,16 @@ header .logo {
   }
 }
 .galeria-imagenes img {
-  height: 20rem;
-  object-fit: cover;
+  height: 100%;
   border-radius: 2rem;
   background-color: #ffffff;
   border: #FCD406 solid 3px;
+}
+@media (min-width: 768px) {
+  .galeria-imagenes img {
+    height: 20rem;
+    object-fit: cover;
+  }
 }
 .galeria-imagenes img:hover {
   transform: scale(1.05);
