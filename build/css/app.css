@@ -383,15 +383,20 @@ body > section {
 }
 
 header {
+  box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.1);
+  border-bottom: solid 1px black;
+}
+
+.header {
+  max-width: 1440px;
+  margin: 0 auto;
   background-color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  border-bottom: solid 1px black;
   padding: 1.5rem 3rem;
 }
-header .logo {
+.header .logo {
   height: 4rem;
   min-width: 15rem;
   object-fit: cover;
@@ -778,6 +783,8 @@ header .logo {
   display: flex;
   padding: 5rem 0;
   transition: transform 0.3s ease;
+  width: 100%;
+  align-items: center;
 }
 @media (min-width: 768px) {
   .productos .producto {
@@ -786,15 +793,15 @@ header .logo {
   }
 }
 .productos .producto img {
+  width: 14rem;
   height: 12rem;
-  width: 18rem;
   object-fit: cover;
   object-position: center;
   border-radius: 50rem 50rem;
 }
 @media (min-width: 768px) {
   .productos .producto img {
-    width: 25rem;
+    width: 23rem;
     height: 16rem;
   }
 }
@@ -832,26 +839,33 @@ header .logo {
 .informacion-producto h3 {
   text-align: left;
   font-weight: 400;
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   margin-bottom: 0;
+  margin: 0 auto;
 }
 @media (min-width: 768px) {
+  .informacion-producto h3 {
+    font-size: 2.2rem;
+    text-align: center;
+  }
+}
+@media (min-width: 1200px) {
   .informacion-producto h3 {
     font-size: 2.6rem;
   }
 }
 
 .producto-flip {
-  width: 20rem;
+  overflow: hidden;
+  width: 14rem;
   height: 12rem;
   object-fit: cover;
   object-position: center;
-  border-radius: 50rem 50rem;
   position: relative;
 }
 @media (min-width: 768px) {
   .producto-flip {
-    width: 25rem;
+    width: 23rem;
     height: 16rem;
   }
 }
@@ -867,6 +881,17 @@ header .logo {
   height: 100%;
   transform-style: preserve-3d;
   transition: all 0.5s ease;
+  width: 14rem;
+}
+@media (min-width: 768px) {
+  .producto-flip .flip {
+    width: 23rem;
+  }
+}
+@media (min-width: 1200px) {
+  .producto-flip .flip {
+    width: 32rem;
+  }
 }
 .producto-flip .producto-front, .producto-flip .producto-back {
   position: absolute;
@@ -883,38 +908,30 @@ header .logo {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  font-size: 1.4rem;
-  width: 18rem;
+  font-size: 1rem;
+  padding: 1.6rem;
+  text-align: center;
 }
 @media (min-width: 768px) {
   .producto-flip .producto-back {
     font-size: 1.6rem;
-    width: 25rem;
   }
 }
 @media (min-width: 1200px) {
   .producto-flip .producto-back {
-    font-size: 2rem;
-    width: 32rem;
+    font-size: 1.8rem;
+    padding: 2rem;
   }
 }
 .producto-flip .producto-back p {
   margin: 0;
 }
 
+.producto {
+  gap: 2rem;
+}
 .producto.flipped .flip {
   transform: rotateY(180deg);
-  width: 18rem;
-}
-@media (min-width: 768px) {
-  .producto.flipped .flip {
-    width: 25rem;
-  }
-}
-@media (min-width: 1200px) {
-  .producto.flipped .flip {
-    width: 32rem;
-  }
 }
 
 #nosotros {
@@ -926,6 +943,7 @@ header .logo {
 #nosotros .contenedor {
   display: flex;
   flex-direction: column-reverse;
+  max-width: 1440px;
 }
 @media (min-width: 768px) {
   #nosotros .contenedor {
