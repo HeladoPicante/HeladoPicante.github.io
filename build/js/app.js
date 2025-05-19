@@ -9,11 +9,12 @@ document.addEventListener('DOMContentLoaded', function(){
 })
 
 function desplegarNavegacion() {
-    const burger = document.querySelector('.burger')
+    const burger = document.querySelector('.burger-button')
     const nav = document.querySelector('.navegacion-principal')
 
     burger.addEventListener('click', ()=>{
-        nav.classList.toggle('activo')
+        burger.classList.toggle('active')
+        nav.classList.toggle('active')
     })
 }
 

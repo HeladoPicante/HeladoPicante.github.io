@@ -5,12 +5,12 @@
 header{
     box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.1);
     border-bottom: solid 1px black;
+    background-color: white;
 }
 
 .header{
     max-width: 1440px;
     margin: 0 auto;
-    background-color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -61,16 +61,77 @@ header{
     }
 }
 
-.burger{
-    display: flex;
-    @include m.tablet{
-        display: none;
-        
+.burger-button {
+    display: none; /* Oculto por defecto en desktop */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 1rem;
+    z-index: 1000;
+  }
+  
+  .burger-line {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+  }
+  
+  /* Estilos cuando está activo */
+  .burger-button.active .burger-line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  .burger-button.active .burger-line:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .burger-button.active .burger-line:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+  }
+  
+  /* Mostrar solo en móvil */
+  @media (max-width: 768px) {
+    .burger-button {
+      display: block;
     }
-    img{
-        height: 5rem;
+    
+    /* Asegúrate de que tu nav esté oculto por defecto en móvil */
+    .navegacion-principal {
+      display: none;
+      width: 100%;
+      /* Agrega aquí otros estilos de posición según tu layout */
     }
-}
+    
+    @keyframes deslizarYDesvanecer {
+        from {
+            opacity: 0;
+            transform: translateY(-30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    .navegacion-principal.active {
+        gap: 4rem;
+        padding: 5rem 0;
+        border-bottom: 0.1rem solid black;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        animation: deslizarYDesvanecer 0.5s ease forwards;
+        z-index: 3;
+    }
+    
+  }
 
 .navegacion{
     display: flex;
