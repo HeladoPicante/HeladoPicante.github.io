@@ -67,6 +67,13 @@ function configurarCategorias() {
             crearGaleria(categoriaActual);
         });
     });
+
+    categorias.forEach(categoria => {
+        categoria.addEventListener('click', () => {
+            categorias.forEach(cat => cat.classList.remove('activo'));
+            categoria.classList.toggle('activo');
+        });
+    });
 }
 
 function mostrarImagen(i, categoriaActual) {
