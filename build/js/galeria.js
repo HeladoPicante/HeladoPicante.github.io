@@ -1,6 +1,7 @@
 addEventListener('DOMContentLoaded', () => {
     crearGaleria()
     configurarCategorias()
+    contadores()
 })
 
 function crearGaleria(categoriaActual = 'todos') {
@@ -77,9 +78,6 @@ function configurarCategorias() {
 }
 
 function mostrarImagen(i, categoriaActual) {
-    // const imagen = document.createElement('IMG')
-    // imagen.src = `src/img/gallery/full/${i}.jpg`
-    // imagen.alt = 'Imagen de galería'
     const imagen = document.createElement('PICTURE')
     imagen.innerHTML = `
     <source srcset="build/img/gallery/${categoriaActual}/full/${i}.avif" type="image/avif">
@@ -132,4 +130,23 @@ function selecionarCategoria(){
             categoria.classList.toggle('activo')
         })
     })
+}
+
+function contadores(){
+    const contadores = document.querySelectorAll('.num-contador');
+    
+    contadores.forEach(elemento => {
+        const valorFinal = parseInt(elemento.innerText.replace(/,/g, '')); // Elimina comas y convierte a número
+        let contador = 0;
+        
+        // Actualización más rápida usando intervalos
+        const intervalo = setInterval(() => {
+            contador += Math.ceil(valorFinal / 50); // Ajusta la velocidad aquí
+            if(contador >= valorFinal) {
+                clearInterval(intervalo);
+                contador = valorFinal;
+            }
+            elemento.innerText = contador.toLocaleString(); // Formato con comas
+        }, 30);
+    });
 }
