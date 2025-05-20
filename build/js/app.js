@@ -2,10 +2,7 @@ document.addEventListener('DOMContentLoaded', function(){
     desplegarNavegacion()
     cambiarEnlaceSegunResolucion()
     window.addEventListener('resize', cambiarEnlaceSegunResolucion)
-    // selecionarCategoria()
     flipImg()
-    // crearGaleria()
-    // configurarCategorias()
 })
 
 function desplegarNavegacion() {
@@ -38,11 +35,13 @@ function flipImg(){
 }
 
 function cambiarEnlaceSegunResolucion(){
-    const enlace = document.querySelector('.enlace')
-    
-    if(window.innerWidth <= 768){
-        enlace.setAttribute('href', '#contacto')
-    }else{
-        enlace.setAttribute('href', '#footer')
-    }
+    const enlaces = document.querySelectorAll('.enlace')
+
+    enlaces.forEach(enlace => {
+        if(window.innerWidth <= 768){
+            enlace.setAttribute('href', '#contacto')
+        }else{
+            enlace.setAttribute('href', '#footer')
+        }
+    })
 }
