@@ -2,86 +2,93 @@
 @use 'base/mixins' as m;
 @use 'sass:color';
 
-.footer{
-    // display: none;
+.footer {
     justify-content: center;
     padding: 5rem;
 
-    .footer-contenedor{
+    .footer-contenedor {
         display: none;
     }
-    
-    @include m.desktop{
+
+    @include m.desktop {
         background-color: v.$blanco;
-        .footer-contenedor{
+        .footer-contenedor {
+            max-width: 1400px;
+            margin: 0 auto;
             display: flex;
             padding: 5rem;
             @include m.grid(3);
         }
-        
     }
 }
 
-.footer-info{
+.footer-info {
     margin: 0 auto;
-    .footer-logo{
+    .footer-logo {
         width: 30rem;
         margin-bottom: 2.2rem;
     }
 }
 
-.informacion{
-
-    a{
+.informacion {
+    a {
         display: flex;
         gap: 2.2rem;
         justify-content: flex-start;
         align-items: center;
 
-        img{
+        img {
             width: 4rem;
             transition: transform 0.3s ease-in-out;
         }
 
-        &:hover{
+        &:hover {
             transform: scale(1.1);
         }
     }
 }
 
-.footer-form, .m-form{ 
+.footer-form,
+.m-form {
     margin: 0 auto;
     width: 40rem;
-    .form{
+
+    @include m.desktop {
+        width: 100%;
+    }
+    .form {
         display: inline;
-        input, textarea{
+        input,
+        textarea {
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
             padding: 1rem;
             width: calc(100% - 1rem);
             margin: 0.5rem 0;
-            resize: vertical;   
+            resize: vertical;
         }
-        
-        textarea{
+
+        textarea {
             height: 15rem;
         }
     }
 
-    button{
+    button {
         margin: 0 auto;
         @include m.boton(v.$negro, v.$blanco, block);
     }
 }
 
-.m-form{
+.m-form {
     margin-bottom: 5rem;
 }
 
-#nombre, #apellido{
+#nombre,
+#apellido {
     width: calc(50% - 1rem);
     margin: 0.5rem;
 }
 
-#nombre, #apellido{
+#nombre,
+#apellido {
     margin-left: 0;
 }

@@ -2,68 +2,69 @@
 @use 'base/mixins' as m;
 @use 'sass:color';
 
-.hero-index{
+.hero-index {
     padding: 5rem;
     margin-bottom: 5rem;
-    min-height: 70vh;
-    @include m.tablet{
+    min-height: 0;
+    @include m.tablet {
         display: flex;
         justify-content: space-evenly;
         align-items: center;
+        min-height: 70vh;
     }
 
-    .overlay{
+    .overlay {
         color: v.$negro;
         margin-bottom: 5rem;
-        
-        @include m.tablet{
+
+        @include m.tablet {
             max-width: 40vw;
             margin-bottom: 0;
         }
-    
-        h2{
+
+        h2 {
             color: v.$azul;
             text-transform: uppercase;
             font-size: small;
             font-weight: 500;
             margin-bottom: 3rem;
         }
-    
-        h1{
+
+        h1 {
             font-size: 4rem;
             margin-bottom: 2.8rem;
-    
-            span{
+
+            span {
                 color: v.$azul;
             }
         }
 
-        p{
+        p {
             margin: 0;
             font-size: 1.8rem;
         }
     }
 }
 
-.img-logo{
+.img-logo {
     position: relative;
     // margin: 0 5rem;
 
-    .logo{
+    .logo {
         width: 20rem;
         box-shadow: v.$sombraArriba;
         border-radius: 100%;
         z-index: 1;
         margin: 0 auto;
 
-        @include m.tablet{
+        @include m.tablet {
             box-shadow: v.$sombraAbajo;
         }
     }
 }
 
-.img-logo::before{
-    content: "";
+.img-logo::before {
+    content: '';
     position: absolute;
     width: 1500%;
     height: 60%;
@@ -72,26 +73,25 @@
     left: -3rem;
     bottom: -3rem;
 
-    @include m.tablet{
+    @include m.tablet {
         bottom: -15rem;
     }
 }
 
-.no-webp .no-avif .img-ropa::before{
+.no-webp .no-avif .img-ropa::before {
     background-image: url(../img/util/ropa-doblada.jpg);
 }
 
-.webp .img-ropa::before{
+.webp .img-ropa::before {
     background-image: url(../img/util/ropa-doblada.webp);
 }
-.avif .img-ropa::before{
+.avif .img-ropa::before {
     background-image: url(../img/util/ropa-doblada.avif);
 }
 
-
-.img-ropa::before{
+.img-ropa::before {
     display: none;
-    content: "";
+    content: '';
     position: absolute;
     top: -10rem;
     left: 10rem;
@@ -102,12 +102,12 @@
     background-position: center;
     z-index: -2;
 
-    @include m.tablet{
+    @include m.tablet {
         display: block;
     }
 }
 
-.hero-galeria{
+.hero-galeria {
     position: relative;
     z-index: 1;
     margin: 0 auto;
@@ -117,7 +117,7 @@
     background-position: center center;
     margin-bottom: 10rem;
 
-    @include m.tablet{
+    @include m.tablet {
         min-height: 55rem;
         display: flex;
         justify-content: space-between;
@@ -125,22 +125,22 @@
         align-items: center;
         padding: 10rem 0;
     }
-    
-    h1{
+
+    h1 {
         font-weight: v.$black;
         padding: 2rem;
-        
-        @include m.tablet{
+
+        @include m.tablet {
             background-color: v.$amarillo;
             width: 60rem;
         }
 
-        span{
+        span {
             color: v.$azul;
         }
     }
 
-    &::before{
+    &::before {
         content: '';
         position: absolute;
         top: 0;
@@ -151,43 +151,43 @@
         z-index: -1;
     }
 
-    .estadisticas{
+    .estadisticas {
         margin: 0 auto;
         @include m.grid(2, 0rem);
         grid-template-rows: 2;
 
-        @include m.tablet{
+        @include m.tablet {
             @include m.grid(3, 0rem);
         }
-        
-        .estadistica{
+
+        .estadistica {
             display: flex;
             flex-direction: column;
             padding: 2rem 2rem;
             align-items: center;
             margin-left: 0;
-            
-            &:first-of-type{
+
+            &:first-of-type {
                 border-right: v.$negro 4px solid;
             }
-            
-            @include m.tablet{
+
+            @include m.tablet {
                 border-right: v.$negro 4px solid;
                 padding: 2rem 5rem;
                 align-items: start;
             }
 
-            &:last-of-type{
+            &:last-of-type {
                 border-right: 0;
                 grid-column: span 2;
                 margin: 0 auto;
 
-                @include m.tablet{
+                @include m.tablet {
                     grid-column: auto;
                 }
             }
 
-            h3{
+            h3 {
                 font-size: 2.4rem;
                 margin: 0;
             }

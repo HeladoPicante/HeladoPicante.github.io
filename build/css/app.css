@@ -513,13 +513,14 @@ header {
 .hero-index {
   padding: 5rem;
   margin-bottom: 5rem;
-  min-height: 70vh;
+  min-height: 0;
 }
 @media (min-width: 768px) {
   .hero-index {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    min-height: 70vh;
   }
 }
 .hero-index .overlay {
@@ -1130,6 +1131,8 @@ header {
     background-color: #FFFFF0;
   }
   .footer .footer-contenedor {
+    max-width: 1400px;
+    margin: 0 auto;
     display: flex;
     padding: 5rem;
     display: grid;
@@ -1160,24 +1163,37 @@ header {
   transform: scale(1.1);
 }
 
-.footer-form, .m-form {
+.footer-form,
+.m-form {
   margin: 0 auto;
   width: 40rem;
 }
-.footer-form .form, .m-form .form {
+@media (min-width: 1200px) {
+  .footer-form,
+  .m-form {
+    width: 100%;
+  }
+}
+.footer-form .form,
+.m-form .form {
   display: inline;
 }
-.footer-form .form input, .footer-form .form textarea, .m-form .form input, .m-form .form textarea {
+.footer-form .form input,
+.footer-form .form textarea,
+.m-form .form input,
+.m-form .form textarea {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   padding: 1rem;
   width: calc(100% - 1rem);
   margin: 0.5rem 0;
   resize: vertical;
 }
-.footer-form .form textarea, .m-form .form textarea {
+.footer-form .form textarea,
+.m-form .form textarea {
   height: 15rem;
 }
-.footer-form button, .m-form button {
+.footer-form button,
+.m-form button {
   margin: 0 auto;
   background-color: #333;
   color: #FFFFF0;
@@ -1190,7 +1206,8 @@ header {
   display: block;
   transition: transform 0.3s ease;
 }
-.footer-form button:hover, .m-form button:hover {
+.footer-form button:hover,
+.m-form button:hover {
   background-color: rgb(38.25, 38.25, 38.25);
   transform: scale(1.1);
 }
@@ -1199,12 +1216,14 @@ header {
   margin-bottom: 5rem;
 }
 
-#nombre, #apellido {
+#nombre,
+#apellido {
   width: calc(50% - 1rem);
   margin: 0.5rem;
 }
 
-#nombre, #apellido {
+#nombre,
+#apellido {
   margin-left: 0;
 }
 
