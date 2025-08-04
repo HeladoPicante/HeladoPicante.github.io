@@ -1,362 +1,669 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Formato más moderno y liviano -->
-    <link rel="icon" type="image/png" href="build/img/logos/Logo-prodisa_01-02.png">
-    <title>Prodisa</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="build/css/app.css">
-</head>
-<body>
-    <header>
-        <div class="header">
-            <a href="/">
-                <picture>
-                    <source class="logo" srcset="build/img/logos/Logo-prodisa_01-03.avif" type="image/avif">
-                    <source class="logo" srcset="build/img/logos/Logo-prodisa_01-03.webp" type="image/webp">
-                    <img class="logo" src="build/img/logos/Logo-prodisa_01-03.png" alt="Logo de Prodisa" loading="lazy">
-                </picture>
-            </a>
-            <div class="navegacion">
-                <button class="burger-button" id="burger-button" aria-label="Menú principal">
-                    <span class="burger-line"></span>
-                    <span class="burger-line"></span>
-                    <span class="burger-line"></span>
-                </button>
-                
-                <nav class="navegacion-principal">
-                    <a href="#inicio" class="activo">Inicio</a>
-                    <a href="galeria.html">Productos</a>
-                    <a href="#nosotros">Nosotros</a>
-                    <a href="#contacto" class="enlace">Contáctanos</a>
-                </nav>
-            </div>
-        </div>
-    </header>
-    
-    <div class="hero-index contenedor">
-        <div class="overlay">
-            <h2>- Servicio de costura</h2>
-            <h1>Brindamos el mejor servicio de <span>elaboración</span> de uniformes</h1>
-            <p>Fabricamos uniformes de alta calidad para tu empresa, tenemos uniformes empresariales, batas, productos de biosegurdad y más.</p>
-        </div>
-        <div class="img-logo">
-            <div class="img-ropa">
-                <img class="logo" src="build\img\logos\Logo-prodisa_01-01.avif" alt="Logo de Prodisa">
-            </div>
-        </div>
-    </div>
-
-    <div class="iconos-nosotros ">
-        <div class="icono">
-            <img src="build/img/icons/nosotros.svg" alt="Nosotros">
-            <h4>Nosotros</h4>
-            <a href="#nosotros">leer más</a>
-        </div>
-
-        <div class="icono">
-            <img src="build/img/icons/contacto.svg" alt="Contáctanos">
-            <h4>Contáctanos</h4>
-            <a href="#contacto" class="enlace">leer más</a>
-        </div>
-
-        <div class="icono">
-            <img src="build/img/icons/ubicacion.svg" alt="Ubicación">
-            <h4>Ubicación</h4>
-            <a href="#footer">leer más</a>
-        </div>
-
-        <div class="icono">
-            <img src="build/img/icons/tienda.svg" alt="Tienda Virtual">
-            <h4>Tienda Virtual</h4>
-            <a href="galeria.html">leer más</a>
-        </div>
-    </div>
-    
-    <main class="main contenedor">
-        <div class="contenedor-info">
-            <div>
-                <h2>Sobre nuestros productos</h2>
-                <p>En PRODISA, diseñamos y confeccionamos uniformes, camisas, overoles y otras prendas personalizadas con los más altos estándares de calidad. Utilizamos materiales resistentes y cómodos para garantizar durabilidad y elegancia en cada pieza. Nuestro compromiso es ofrecer ropa que refleje profesionalismo y se adapte a las necesidades de tu empresa.</p>
-            </div>
-            <div class="contenedor-img">
-                <picture>
-                    <source srcset="build/img/util/ropa-doblada.avif" type="image/avif">
-                    <source srcset="build/img/util/ropa-doblada.webp" type="image/webp">
-                    <img src="build/img/util/ropa-doblada.jpg" alt="ropa" loading="lazy">
-                </picture>
-            </div>
-        </div>
-        <div class="reves contenedor-info">
-            <div>
-                <h2>Overoles</h2>
-                <p>Confeccionamos overoles diseñados para brindar protección, comodidad y resistencia en distintos entornos de trabajo. Utilizamos telas de alta durabilidad y ajuste ergonómico para garantizar libertad de movimiento y seguridad. Disponibles en diferentes estilos, colores y materiales, se adaptan a las necesidades de cada empresa.</p>
-            </div>
-            <div class="contenedor-img">
-                <picture>
-                    <source srcset="build/img/util/ropa-doblada.avif" type="image/avif">
-                    <source srcset="build/img/util/ropa-doblada.webp" type="image/webp">
-                    <img src="build/img/util/ropa-doblada.jpg" alt="ropa" loading="lazy">
-                </picture>
-            </div>
-        </div>
-        <div class="contenedor-info">
-            <div class="">
-                <h2>Camisas de vestir</h2>
-                <p>Diseñamos camisas de vestir elegantes y funcionales, ideales para proyectar una imagen profesional. Confeccionadas con materiales de alta calidad, ofrecen comodidad, resistencia y un ajuste impecable. Disponibles en distintos cortes, colores y tejidos, nuestras camisas se adaptan a las necesidades de cada empresa, garantizando estilo y durabilidad.</p>
-            </div>
-            <div class="contenedor-img">
-                <picture>
-                    <source srcset="build/img/util/ropa-doblada.avif" type="image/avif">
-                    <source srcset="build/img/util/ropa-doblada.webp" type="image/webp">
-                    <img src="build/img/util/ropa-doblada.jpg" alt="ropa" loading="lazy">
-                </picture>
-            </div>
-        </div>
-    </main>
-
-    <section id="productos">
-        <div class="productos">
-            <div class="producto">
-                <div class="producto-flip">
-                    <div class="flip">
-                        <div class="producto-front">
-                            <picture>
-                                <source srcset="build/img/util/ropa-doblada.avif" type="image/avif">
-                                <source srcset="build/img/util/ropa-doblada.webp" type="image/webp">
-                                <img src="build/img/util/ropa-doblada.jpg" alt="ropa" loading="lazy">
-                            </picture>
-                        </div>
-                        <div class="producto-back">
-                        <!-- <p><strong>Uniforme Corporativo</strong></p> -->
-                        <p>✔ Material: Algodón / Poliéster</p>
-                        <p>✔ Colores: Azul, Gris, Negro</p>
-                        <p>✔ Tallas: S, M, L, XL</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="informacion-producto">
-                    <h3>Uniforme</h3>
-                    <a class="btn-ver">Ver más</a>
-                </div>
-            </div>
-            <div class="producto">
-                <div class="producto-flip">
-                    <div class="flip">
-                        <div class="producto-front">
-                            <picture>
-                                <source srcset="build/img/util/ropa-doblada.avif" type="image/avif">
-                                <source srcset="build/img/util/ropa-doblada.webp" type="image/webp">
-                                <img src="build/img/util/ropa-doblada.jpg" alt="ropa" loading="lazy">
-                            </picture>
-                        </div>
-                        <div class="producto-back">
-                        <!-- <p><strong>Camisa de Vestir</strong></p> -->
-                        <p>✔ Material: Algodón premium</p>
-                        <p>✔ Colores: Blanco, Azul, Celeste</p>
-                        <p>✔ Tallas: S, M, L, XL</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="informacion-producto">
-                    <h3>Camisa de vestir</h3>
-                    <a class="btn-ver">Ver más</a>
-                </div>
-            </div>
-            <div class="producto">
-                <div class="producto-flip">
-                    <div class="flip">
-                        <div class="producto-front">
-                            <picture>
-                                <source srcset="build/img/util/ropa-doblada.avif" type="image/avif">
-                                <source srcset="build/img/util/ropa-doblada.webp" type="image/webp">
-                                <img src="build/img/util/ropa-doblada.jpg" alt="ropa" loading="lazy">
-                            </picture>
-                        </div>
-                        <div class="producto-back">
-                        <!-- <p><strong>Overol de Trabajo</strong></p> -->
-                        <p>✔ Material: Tela resistente (mezclilla o gabardina)</p>
-                        <p>✔ Colores: Azul Marino, Gris, Rojo</p>
-                        <p>✔ Tallas: M, L, XL, XXL</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="informacion-producto">
-                    <h3>Overol de trabajo</h3>
-                    <a class="btn-ver">Ver más</a>
-                </div>
-            </div>
-        </div>
-
-        <button>
-            <a href="galeria.html">
-                Ver más productos
-            </a>
-        </button>
-    </section>
-
-    <section id="nosotros" class="contenedor">
-        <div class="contenedor contenedor-mision">
-            <div>
-                <h2>Misión</h2>
-                <p>Brindar soluciones en confección de uniformes, camisas, overoles y otras prendas empresariales con los más altos estándares de calidad. Nos enfocamos en ofrecer diseños funcionales y cómodos, adaptados a las necesidades de cada cliente, garantizando durabilidad, elegancia y profesionalismo en cada prenda.</p>
-            </div>
-            <picture>
-                <source srcset="build/img/util/ropa-doblada.avif" type="image/avif">
-                <source srcset="build/img/util/ropa-doblada.webp" type="image/webp">
-                <img src="build/img/util/ropa-doblada.jpg" alt="ropa" loading="lazy">
-            </picture>
-        </div>
-
-        <div class="contenedor contenedor-vision">
-            <div>
-                <h2>Visión</h2>
-                <p>Ser la empresa líder en confección de indumentaria corporativa, reconocida por la calidad de nuestros productos y el compromiso con nuestros clientes. Buscamos innovar en diseño y materiales, ofreciendo soluciones textiles que se adapten a las exigencias del mercado y fortalezcan la identidad de cada empresa.</p>
-            </div>
-            <picture>
-                <source srcset="build/img/util/ropa-doblada.avif" type="image/avif">
-                <source srcset="build/img/util/ropa-doblada.webp" type="image/webp">
-                <img src="build/img/util/ropa-doblada.jpg" alt="ropa" loading="lazy">
-            </picture>
-        </div>
-    </section>
-
-    <section id="contacto">
-        <div class="img-contacto">
-            <img src="build/img/icons/telefono2.svg" alt="telefono">
-        </div>
-        <div class="contacto contenedor">
-            <div class="contacto-info">
-                <h4>Ponte en contacto</h4>
-                <p>¿Necesitas uniformes, camisas o overoles para tu empresa? Estamos aquí para ayudarte. Contáctanos y te asesoraremos en la elección de las prendas ideales para tu equipo. Ya sea que busques personalización, materiales específicos o un diseño único, nuestro equipo está listo para brindarte la mejor solución.</p>
-            </div>
-            <!-- <button class="boton-contacto">Contacto</button> -->
-            <div class="redes">
-                <a href="https://wa.me/92003852">
-                    <img src="build/img/icons/whatsapp.svg" alt="whatsapp">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Formato más moderno y liviano -->
+        <link
+            rel="icon"
+            type="image/png"
+            href="build/img/logos/Logo-prodisa_01-02.png"
+        />
+        <title>Prodisa</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="build/css/app.css" />
+    </head>
+    <body>
+        <header>
+            <div class="header">
+                <a href="/">
+                    <picture>
+                        <source
+                            class="logo"
+                            srcset="build/img/logos/Logo-prodisa_01-03.avif"
+                            type="image/avif"
+                        />
+                        <source
+                            class="logo"
+                            srcset="build/img/logos/Logo-prodisa_01-03.webp"
+                            type="image/webp"
+                        />
+                        <img
+                            class="logo"
+                            src="build/img/logos/Logo-prodisa_01-03.png"
+                            alt="Logo de Prodisa"
+                            loading="lazy"
+                        />
+                    </picture>
                 </a>
-                <a href="https://www.facebook.com/PordisaCA/?locale=es_LA" target="_blank" rel="noopener noreferrer">
-                    <img src="build/img/icons/facebook.svg" alt="facebook">
-                </a>
-                <a href="mailto:agaray@prodisahn.com">
-                    <img src="build/img/icons/mail.svg" alt="correo" target="_blank">
-                </a>
+                <div class="navegacion">
+                    <button
+                        class="burger-button"
+                        id="burger-button"
+                        aria-label="Menú principal"
+                    >
+                        <span class="burger-line"></span>
+                        <span class="burger-line"></span>
+                        <span class="burger-line"></span>
+                    </button>
+
+                    <nav class="navegacion-principal">
+                        <a href="#inicio" class="activo">Inicio</a>
+                        <a href="galeria.html">Productos</a>
+                        <a href="#nosotros">Nosotros</a>
+                        <a href="#contacto" class="enlace">Contáctanos</a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <div class="hero-index contenedor">
+            <div class="overlay">
+                <h2>- Servicio de costura</h2>
+                <h1>
+                    Brindamos el mejor servicio de <span>elaboración</span> de
+                    uniformes
+                </h1>
+                <p>
+                    Fabricamos uniformes de alta calidad para tu empresa,
+                    tenemos uniformes empresariales, batas, productos de
+                    biosegurdad y más.
+                </p>
+            </div>
+            <div class="img-logo">
+                <div class="img-ropa">
+                    <img
+                        class="logo"
+                        src="build\img\logos\Logo-prodisa_01-01.avif"
+                        alt="Logo de Prodisa"
+                    />
+                </div>
             </div>
         </div>
 
-        <div class="modal-form ">
-            <div class="m-form">
-                <form method="post" onsubmit="enviarCorreo(event)">
-                    <div class="form">
-                        <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
-                    </div>
-                    <div class="form">
-                        <input type="text" id="apellido" name="apellido" placeholder="Apellido" required>
-                    </div>
-                    <div class="form">
-                        <input type="email" id="correo" name="correo" placeholder="Correo" required>
-                    </div>
-                    <div class="form">
-                        <input type="tel" id="telefono" name="telefono" placeholder="Teléfono" required>
-                    </div>
-                    <div class="form">
-                        <textarea type="text" id="mensaje" name="mensaje" placeholder="Mensaje" required></textarea>
-                    </div>
-                    <button type="submit">Enviar Solicitud</button>
-                </form>
+        <div class="iconos-nosotros">
+            <div class="icono">
+                <img src="build/img/icons/nosotros.svg" alt="Nosotros" />
+                <h4>Nosotros</h4>
+                <a href="#nosotros">leer más</a>
             </div>
 
-            <div class="footer-map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3870.2757762587007!2d-87.18123662519018!3d14.060885790062992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6fbd3300735a07%3A0xce400539d61dd3f4!2sPRODISA!5e0!3m2!1ses-419!2shn!4v1733076539890!5m2!1ses-419!2shn" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="icono">
+                <img src="build/img/icons/contacto.svg" alt="Contáctanos" />
+                <h4>Contáctanos</h4>
+                <a href="#contacto" class="enlace">leer más</a>
+            </div>
+
+            <div class="icono">
+                <img src="build/img/icons/ubicacion.svg" alt="Ubicación" />
+                <h4>Ubicación</h4>
+                <a href="#footer">leer más</a>
+            </div>
+
+            <div class="icono">
+                <img src="build/img/icons/tienda.svg" alt="Tienda Virtual" />
+                <h4>Tienda Virtual</h4>
+                <a href="galeria.html">leer más</a>
             </div>
         </div>
-    </section>
 
-    <footer class="footer" id="footer">
-        <div class="footer-contenedor">
+        <main class="main contenedor">
+            <div class="contenedor-info">
+                <div>
+                    <h2>Sobre nuestros productos</h2>
+                    <p>
+                        En PRODISA, diseñamos y confeccionamos uniformes,
+                        camisas, overoles y otras prendas personalizadas con los
+                        más altos estándares de calidad. Utilizamos materiales
+                        resistentes y cómodos para garantizar durabilidad y
+                        elegancia en cada pieza. Nuestro compromiso es ofrecer
+                        ropa que refleje profesionalismo y se adapte a las
+                        necesidades de tu empresa.
+                    </p>
+                </div>
+                <div class="contenedor-img">
+                    <picture>
+                        <source
+                            srcset="build/img/util/ropa-doblada.avif"
+                            type="image/avif"
+                        />
+                        <source
+                            srcset="build/img/util/ropa-doblada.webp"
+                            type="image/webp"
+                        />
+                        <img
+                            src="build/img/util/ropa-doblada.jpg"
+                            alt="ropa"
+                            loading="lazy"
+                        />
+                    </picture>
+                </div>
+            </div>
+            <div class="reves contenedor-info">
+                <div>
+                    <h2>Overoles</h2>
+                    <p>
+                        Confeccionamos overoles diseñados para brindar
+                        protección, comodidad y resistencia en distintos
+                        entornos de trabajo. Utilizamos telas de alta
+                        durabilidad y ajuste ergonómico para garantizar libertad
+                        de movimiento y seguridad. Disponibles en diferentes
+                        estilos, colores y materiales, se adaptan a las
+                        necesidades de cada empresa.
+                    </p>
+                </div>
+                <div class="contenedor-img">
+                    <picture>
+                        <source
+                            srcset="build/img/util/ropa-doblada.avif"
+                            type="image/avif"
+                        />
+                        <source
+                            srcset="build/img/util/ropa-doblada.webp"
+                            type="image/webp"
+                        />
+                        <img
+                            src="build/img/util/ropa-doblada.jpg"
+                            alt="ropa"
+                            loading="lazy"
+                        />
+                    </picture>
+                </div>
+            </div>
+            <div class="contenedor-info">
+                <div class="">
+                    <h2>Camisas de vestir</h2>
+                    <p>
+                        Diseñamos camisas de vestir elegantes y funcionales,
+                        ideales para proyectar una imagen profesional.
+                        Confeccionadas con materiales de alta calidad, ofrecen
+                        comodidad, resistencia y un ajuste impecable.
+                        Disponibles en distintos cortes, colores y tejidos,
+                        nuestras camisas se adaptan a las necesidades de cada
+                        empresa, garantizando estilo y durabilidad.
+                    </p>
+                </div>
+                <div class="contenedor-img">
+                    <picture>
+                        <source
+                            srcset="build/img/util/ropa-doblada.avif"
+                            type="image/avif"
+                        />
+                        <source
+                            srcset="build/img/util/ropa-doblada.webp"
+                            type="image/webp"
+                        />
+                        <img
+                            src="build/img/util/ropa-doblada.jpg"
+                            alt="ropa"
+                            loading="lazy"
+                        />
+                    </picture>
+                </div>
+            </div>
+        </main>
 
-            <div class="footer-info">
+        <section id="productos">
+            <div class="productos">
+                <div class="producto">
+                    <div class="producto-flip">
+                        <div class="flip">
+                            <div class="producto-front">
+                                <picture>
+                                    <source
+                                        srcset="
+                                            build/img/util/ropa-doblada.avif
+                                        "
+                                        type="image/avif"
+                                    />
+                                    <source
+                                        srcset="
+                                            build/img/util/ropa-doblada.webp
+                                        "
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        src="build/img/util/ropa-doblada.jpg"
+                                        alt="ropa"
+                                        loading="lazy"
+                                    />
+                                </picture>
+                            </div>
+                            <div class="producto-back">
+                                <!-- <p><strong>Uniforme Corporativo</strong></p> -->
+                                <p>✔ Material: Algodón / Poliéster</p>
+                                <p>✔ Colores: Azul, Gris, Negro</p>
+                                <p>✔ Tallas: S, M, L, XL</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="informacion-producto">
+                        <h3>Uniforme</h3>
+                        <a class="btn-ver">Ver más</a>
+                    </div>
+                </div>
+                <div class="producto">
+                    <div class="producto-flip">
+                        <div class="flip">
+                            <div class="producto-front">
+                                <picture>
+                                    <source
+                                        srcset="
+                                            build/img/util/ropa-doblada.avif
+                                        "
+                                        type="image/avif"
+                                    />
+                                    <source
+                                        srcset="
+                                            build/img/util/ropa-doblada.webp
+                                        "
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        src="build/img/util/ropa-doblada.jpg"
+                                        alt="ropa"
+                                        loading="lazy"
+                                    />
+                                </picture>
+                            </div>
+                            <div class="producto-back">
+                                <!-- <p><strong>Camisa de Vestir</strong></p> -->
+                                <p>✔ Material: Algodón premium</p>
+                                <p>✔ Colores: Blanco, Azul, Celeste</p>
+                                <p>✔ Tallas: S, M, L, XL</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="informacion-producto">
+                        <h3>Camisa de vestir</h3>
+                        <a class="btn-ver">Ver más</a>
+                    </div>
+                </div>
+                <div class="producto">
+                    <div class="producto-flip">
+                        <div class="flip">
+                            <div class="producto-front">
+                                <picture>
+                                    <source
+                                        srcset="
+                                            build/img/util/ropa-doblada.avif
+                                        "
+                                        type="image/avif"
+                                    />
+                                    <source
+                                        srcset="
+                                            build/img/util/ropa-doblada.webp
+                                        "
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        src="build/img/util/ropa-doblada.jpg"
+                                        alt="ropa"
+                                        loading="lazy"
+                                    />
+                                </picture>
+                            </div>
+                            <div class="producto-back">
+                                <!-- <p><strong>Overol de Trabajo</strong></p> -->
+                                <p>
+                                    ✔ Material: Tela resistente (mezclilla o
+                                    gabardina)
+                                </p>
+                                <p>✔ Colores: Azul Marino, Gris, Rojo</p>
+                                <p>✔ Tallas: M, L, XL, XXL</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="informacion-producto">
+                        <h3>Overol de trabajo</h3>
+                        <a class="btn-ver">Ver más</a>
+                    </div>
+                </div>
+            </div>
+
+            <button>
+                <a href="galeria.html"> Ver más productos </a>
+            </button>
+        </section>
+
+        <section id="nosotros" class="contenedor">
+            <div class="contenedor contenedor-mision">
+                <div>
+                    <h2>Misión</h2>
+                    <p>
+                        Brindar soluciones en confección de uniformes, camisas,
+                        overoles y otras prendas empresariales con los más altos
+                        estándares de calidad. Nos enfocamos en ofrecer diseños
+                        funcionales y cómodos, adaptados a las necesidades de
+                        cada cliente, garantizando durabilidad, elegancia y
+                        profesionalismo en cada prenda.
+                    </p>
+                </div>
                 <picture>
-                    <source srcset="build/img/logos/Logo-prodisa_01-03.avif" type="image/avif">
-                    <source srcset="build/img/logos/Logo-prodisa_01-03.webp" type="image/webp">
-                    <img class="logo" src="build/img/logos/Logo-prodisa_01-03.png" alt="Logo de Prodisa" loading="lazy">
+                    <source
+                        srcset="build/img/util/ropa-doblada.avif"
+                        type="image/avif"
+                    />
+                    <source
+                        srcset="build/img/util/ropa-doblada.webp"
+                        type="image/webp"
+                    />
+                    <img
+                        src="build/img/util/ropa-doblada.jpg"
+                        alt="ropa"
+                        loading="lazy"
+                    />
                 </picture>
-                <div class="informacion">
-                    <a href="https://maps.app.goo.gl/kR3HKnfHfcVGruXT9" target="_blank">
-                        <img src="build/img/icons/ubicacion-b.svg" alt="ubicación">
-                        <p>Kennedy TGU</p>
+            </div>
+
+            <div class="contenedor contenedor-vision">
+                <div>
+                    <h2>Visión</h2>
+                    <p>
+                        Ser la empresa líder en confección de indumentaria
+                        corporativa, reconocida por la calidad de nuestros
+                        productos y el compromiso con nuestros clientes.
+                        Buscamos innovar en diseño y materiales, ofreciendo
+                        soluciones textiles que se adapten a las exigencias del
+                        mercado y fortalezcan la identidad de cada empresa.
+                    </p>
+                </div>
+                <picture>
+                    <source
+                        srcset="build/img/util/ropa-doblada.avif"
+                        type="image/avif"
+                    />
+                    <source
+                        srcset="build/img/util/ropa-doblada.webp"
+                        type="image/webp"
+                    />
+                    <img
+                        src="build/img/util/ropa-doblada.jpg"
+                        alt="ropa"
+                        loading="lazy"
+                    />
+                </picture>
+            </div>
+        </section>
+
+        <section id="contacto">
+            <div class="img-contacto">
+                <img src="build/img/icons/telefono2.svg" alt="telefono" />
+            </div>
+            <div class="contacto contenedor">
+                <div class="contacto-info">
+                    <h4>Ponte en contacto</h4>
+                    <p>
+                        ¿Necesitas uniformes, camisas o overoles para tu
+                        empresa? Estamos aquí para ayudarte. Contáctanos y te
+                        asesoraremos en la elección de las prendas ideales para
+                        tu equipo. Ya sea que busques personalización,
+                        materiales específicos o un diseño único, nuestro equipo
+                        está listo para brindarte la mejor solución.
+                    </p>
+                </div>
+                <!-- <button class="boton-contacto">Contacto</button> -->
+                <div class="redes">
+                    <a href="https://wa.me/92003852">
+                        <img
+                            src="build/img/icons/whatsapp.svg"
+                            alt="whatsapp"
+                        />
+                    </a>
+                    <a
+                        href="https://www.facebook.com/PordisaCA/?locale=es_LA"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <img
+                            src="build/img/icons/facebook.svg"
+                            alt="facebook"
+                        />
                     </a>
                     <a href="mailto:agaray@prodisahn.com">
-                        <img src="build/img/icons/mail-b.svg" alt="correo">
-                        <p>agaray@prodisahn.com</p>
-                    </a>
-                    <a href="https://wa.me/92003852">
-                        <img src="build/img/icons/whatsapp-b.svg" alt="whatsapp">
-                        <p>+504 9872-2078</p>
-                    </a>
-                    <a href="https://www.facebook.com/PordisaCA/?locale=es_LA" target="_blank">
-                        <img src="build/img/icons/facebook-b.svg" alt="facebook">
-                        <p>PRODISA</p>
+                        <img
+                            src="build/img/icons/mail.svg"
+                            alt="correo"
+                            target="_blank"
+                        />
                     </a>
                 </div>
             </div>
-    
-            <div class="footer-map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3870.2757762587007!2d-87.18123662519018!3d14.060885790062992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6fbd3300735a07%3A0xce400539d61dd3f4!2sPRODISA!5e0!3m2!1ses-419!2shn!4v1733076539890!5m2!1ses-419!2shn" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            <div class="modal-form">
+                <div class="m-form">
+                    <form method="post" onsubmit="enviarCorreo(event)">
+                        <div class="form">
+                            <input
+                                type="text"
+                                id="nombre"
+                                name="nombre"
+                                placeholder="Nombre"
+                                required
+                            />
+                        </div>
+                        <div class="form">
+                            <input
+                                type="text"
+                                id="apellido"
+                                name="apellido"
+                                placeholder="Apellido"
+                                required
+                            />
+                        </div>
+                        <div class="form">
+                            <input
+                                type="email"
+                                id="correo"
+                                name="correo"
+                                placeholder="Correo"
+                                required
+                            />
+                        </div>
+                        <div class="form">
+                            <input
+                                type="tel"
+                                id="telefono"
+                                name="telefono"
+                                placeholder="Teléfono"
+                                required
+                            />
+                        </div>
+                        <div class="form">
+                            <textarea
+                                type="text"
+                                id="mensaje"
+                                name="mensaje"
+                                placeholder="Mensaje"
+                                required
+                            ></textarea>
+                        </div>
+                        <button type="submit">Enviar Solicitud</button>
+                    </form>
+                </div>
+
+                <div class="footer-map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3870.2757762587007!2d-87.18123662519018!3d14.060885790062992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6fbd3300735a07%3A0xce400539d61dd3f4!2sPRODISA!5e0!3m2!1ses-419!2shn!4v1733076539890!5m2!1ses-419!2shn"
+                        width="100%"
+                        height="450"
+                        style="border: 0"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                    ></iframe>
+                </div>
             </div>
-    
-            <div class="footer-form">
-                <form method="post" onsubmit="enviarCorreo(event)">
-                    <div class="form">
-                        <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+        </section>
+
+        <footer class="footer" id="footer">
+            <div class="footer-contenedor">
+                <div class="footer-info">
+                    <picture>
+                        <source
+                            srcset="build/img/logos/Logo-prodisa_01-03.avif"
+                            type="image/avif"
+                        />
+                        <source
+                            srcset="build/img/logos/Logo-prodisa_01-03.webp"
+                            type="image/webp"
+                        />
+                        <img
+                            class="logo"
+                            src="build/img/logos/Logo-prodisa_01-03.png"
+                            alt="Logo de Prodisa"
+                            loading="lazy"
+                        />
+                    </picture>
+                    <div class="informacion">
+                        <a
+                            href="https://maps.app.goo.gl/kR3HKnfHfcVGruXT9"
+                            target="_blank"
+                        >
+                            <img
+                                src="build/img/icons/ubicacion-b.svg"
+                                alt="ubicación"
+                            />
+                            <p>Kennedy TGU</p>
+                        </a>
+                        <a href="mailto:agaray@prodisahn.com">
+                            <img
+                                src="build/img/icons/mail-b.svg"
+                                alt="correo"
+                            />
+                            <p>agaray@prodisahn.com</p>
+                        </a>
+                        <a href="https://wa.me/92003852">
+                            <img
+                                src="build/img/icons/whatsapp-b.svg"
+                                alt="whatsapp"
+                            />
+                            <p>+504 9872-2078</p>
+                        </a>
+                        <a
+                            href="https://www.facebook.com/PordisaCA/?locale=es_LA"
+                            target="_blank"
+                        >
+                            <img
+                                src="build/img/icons/facebook-b.svg"
+                                alt="facebook"
+                            />
+                            <p>PRODISA</p>
+                        </a>
                     </div>
-                    <div class="form">
-                        <input type="text" id="apellido" name="apellido" placeholder="Apellido" required>
-                    </div>
-                    <div class="form">
-                        <input type="email" id="correo" name="correo" placeholder="Correo" required>
-                    </div>
-                    <div class="form">
-                        <input type="tel" id="telefono" name="telefono" placeholder="Teléfono" required>
-                    </div>
-                    <div class="form">
-                        <textarea type="text" id="mensaje" name="mensaje" placeholder="Mensaje" required></textarea>
-                    </div>
-                    <button type="submit">Enviar Solicitud</button>
-                </form>
+                </div>
+
+                <div class="footer-map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3870.2757762587007!2d-87.18123662519018!3d14.060885790062992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6fbd3300735a07%3A0xce400539d61dd3f4!2sPRODISA!5e0!3m2!1ses-419!2shn!4v1733076539890!5m2!1ses-419!2shn"
+                        width="100%"
+                        height="450"
+                        style="border: 0"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                    ></iframe>
+                </div>
+
+                <div class="footer-form">
+                    <form method="post" onsubmit="enviarCorreo(event)">
+                        <div class="form">
+                            <input
+                                type="text"
+                                id="nombre"
+                                name="nombre"
+                                placeholder="Nombre"
+                                required
+                            />
+                        </div>
+                        <div class="form">
+                            <input
+                                type="text"
+                                id="apellido"
+                                name="apellido"
+                                placeholder="Apellido"
+                                required
+                            />
+                        </div>
+                        <div class="form">
+                            <input
+                                type="email"
+                                id="correo"
+                                name="correo"
+                                placeholder="Correo"
+                                required
+                            />
+                        </div>
+                        <div class="form">
+                            <input
+                                type="tel"
+                                id="telefono"
+                                name="telefono"
+                                placeholder="Teléfono"
+                                required
+                            />
+                        </div>
+                        <div class="form">
+                            <textarea
+                                type="text"
+                                id="mensaje"
+                                name="mensaje"
+                                placeholder="Mensaje"
+                                required
+                            ></textarea>
+                        </div>
+                        <button type="submit">Enviar Solicitud</button>
+                    </form>
+                </div>
             </div>
-        </div>
-    </footer>
-    <script src="build/js/app.js"></script>
-    <script src="build/js/config.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script>
-        (function() {
-        emailjs.init(emailJsConfig.userId);
-    })();
+        </footer>
+        <script src="build/js/app.js"></script>
+        <script src="build/js/config.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        <script>
+            (function () {
+                emailjs.init(emailJsConfig.userId);
+            })();
 
-    function enviarCorreo(event) {
-        event.preventDefault();
+            function enviarCorreo(event) {
+                event.preventDefault();
+                console.log('Enviando correo');
 
-        const templateParams = {
-            nombre: document.getElementById('nombre').value,
-            apellido: document.getElementById('apellido').value,
-            correo: document.getElementById('correo').value,
-            telefono: document.getElementById('telefono').value,
-            mensaje: document.getElementById('mensaje').value,
-        };
+                // Obtener el formulario que disparó el evento
+                const form = event.target;
 
-        emailjs.send(emailJsConfig.serviceId, emailJsConfig.templateId, templateParams)
-            .then(function(response) {
-                alert('Correo enviado correctamente');
-            }, function(error) {
-                alert('Error al enviar el correo: ' + error.text);
-            });
-    }
-    </script>
-</body>
+                // Crear los parámetros usando los elementos del formulario actual
+                const templateParams = {
+                    nombre: form.querySelector('[name="nombre"]').value,
+                    apellido: form.querySelector('[name="apellido"]').value,
+                    correo: form.querySelector('[name="correo"]').value,
+                    telefono: form.querySelector('[name="telefono"]').value,
+                    mensaje: form.querySelector('[name="mensaje"]').value,
+                };
+
+                emailjs
+                    .send(
+                        emailJsConfig.serviceId,
+                        emailJsConfig.templateId,
+                        templateParams
+                    )
+                    .then(
+                        function (response) {
+                            alert('Correo enviado correctamente');
+                            form.reset(); // Limpiar el formulario después del envío
+                        },
+                        function (error) {
+                            alert('Error al enviar el correo: ' + error.text);
+                        }
+                    );
+
+                console.log('Mensaje enviado');
+            }
+        </script>
+    </body>
 </html>
