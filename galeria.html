@@ -358,13 +358,18 @@
 
             function enviarCorreo(event) {
                 event.preventDefault();
+                console.log('Enviando correo');
 
+                // Obtener el formulario que disparó el evento
+                const form = event.target;
+
+                // Crear los parámetros usando los elementos del formulario actual
                 const templateParams = {
-                    nombre: document.getElementById('nombre').value,
-                    apellido: document.getElementById('apellido').value,
-                    correo: document.getElementById('correo').value,
-                    telefono: document.getElementById('telefono').value,
-                    mensaje: document.getElementById('mensaje').value,
+                    nombre: form.querySelector('[name="nombre"]').value,
+                    apellido: form.querySelector('[name="apellido"]').value,
+                    correo: form.querySelector('[name="correo"]').value,
+                    telefono: form.querySelector('[name="telefono"]').value,
+                    mensaje: form.querySelector('[name="mensaje"]').value,
                 };
 
                 emailjs
@@ -376,11 +381,14 @@
                     .then(
                         function (response) {
                             alert('Correo enviado correctamente');
+                            form.reset(); // Limpiar el formulario después del envío
                         },
                         function (error) {
                             alert('Error al enviar el correo: ' + error.text);
                         }
                     );
+
+                console.log('Mensaje enviado');
             }
         </script>
     </body>
