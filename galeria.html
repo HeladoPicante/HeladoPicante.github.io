@@ -1,210 +1,387 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="build/img/logos/Logo-prodisa_01-02.png">
-    <title>Productos de Prodisa</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="build/css/app.css">
-</head>
-<body>
-    <header>
-        <div class="header">
-            <a href="/">
-                <picture>
-                    <source class="logo" srcset="build/img/logos/Logo-prodisa_01-03.avif" type="image/avif">
-                    <source class="logo" srcset="build/img/logos/Logo-prodisa_01-03.webp" type="image/webp">
-                    <img class="logo" src="build/img/logos/Logo-prodisa_01-03.png" alt="Logo de Prodisa" loading="lazy">
-                </picture>
-            </a>
-            <div class="navegacion">
-                <button class="burger-button" id="burger-button" aria-label="Menú principal">
-                    <span class="burger-line"></span>
-                    <span class="burger-line"></span>
-                    <span class="burger-line"></span>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="icon"
+            type="image/png"
+            href="build/img/logos/Logo-prodisa_01-02.png"
+        />
+        <title>Productos de Prodisa</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="build/css/app.css" />
+    </head>
+    <body>
+        <header>
+            <div class="header">
+                <a href="/index.html">
+                    <picture>
+                        <source
+                            class="logo"
+                            srcset="build/img/logos/Logo-prodisa_01-03.avif"
+                            type="image/avif"
+                        />
+                        <source
+                            class="logo"
+                            srcset="build/img/logos/Logo-prodisa_01-03.webp"
+                            type="image/webp"
+                        />
+                        <img
+                            class="logo"
+                            src="build/img/logos/Logo-prodisa_01-03.png"
+                            alt="Logo de Prodisa"
+                            loading="lazy"
+                        />
+                    </picture>
+                </a>
+                <div class="navegacion">
+                    <button
+                        class="burger-button"
+                        id="burger-button"
+                        aria-label="Menú principal"
+                    >
+                        <span class="burger-line"></span>
+                        <span class="burger-line"></span>
+                        <span class="burger-line"></span>
+                    </button>
+
+                    <nav class="navegacion-principal">
+                        <a href="/index.html">Inicio</a>
+                        <a href="galeria.html" class="activo">Productos</a>
+                        <a href="/index.html#nosotros">Nosotros</a>
+                        <a href="#contacto" class="enlace">Contáctanos</a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <div class="hero-galeria">
+            <h1>
+                Algunos de nuestro trabajos para <span>empresas</span> de
+                Honduras
+            </h1>
+
+            <div class="estadisticas">
+                <div class="estadistica">
+                    <h3><span class="num-contador">50</span>+</h3>
+                    <p>Empresas felices</p>
+                </div>
+                <div class="estadistica">
+                    <h3><span class="num-contador">35,000</span>+</h3>
+                    <p>Usuarios felices</p>
+                </div>
+                <div class="estadistica">
+                    <h3><span class="num-contador">130</span>+</h3>
+                    <p>Productos personalizados</p>
+                </div>
+            </div>
+        </div>
+
+        <main class="galeria">
+            <h2>Galeria</h2>
+            <div class="categorias">
+                <button class="categoria activo" data-categoria="todos">
+                    Todos
                 </button>
-                
-                <nav class="navegacion-principal">
-                    <a href="/">Inicio</a>
-                    <a href="galeria.html" class="activo">Productos</a>
-                    <a href="/#nosotros">Nosotros</a>
-                    <a href="#contacto" class="enlace">Contáctanos</a>
-                </nav>
-            </div>
-        </div>
-    </header>
-
-    <div class="hero-galeria">
-        <h1>Algunos de nuestro trabajos para <span>empresas</span> de Honduras</h1>
-
-        <div class="estadisticas">
-            <div class="estadistica">
-                <h3><span class="num-contador">50</span>+</h3>
-                <p>Empresas felices</p>
-            </div>
-            <div class="estadistica">
-                <h3><span class="num-contador">35,000</span>+</h3>
-                <p>Usuarios felices</p>
-            </div>
-            <div class="estadistica">
-                <h3><span class="num-contador">130</span>+</h3>
-                <p>Productos personalizados</p>
-            </div>
-        </div>
-    </div>
-
-    <main class="galeria">
-        <h2>Galeria</h2>
-        <div class="categorias">
-            <button class="categoria activo" data-categoria="todos">Todos</button>
-            <button class="categoria c-overol" data-categoria="overol">Overol</button>
-            <button class="categoria c-camisas" data-categoria="camisas">Camisas</button>
-            <button class="categoria c-chalecos" data-categoria="chalecos">Chalecos</button>
-            <button class="categoria c-camisetas" data-categoria="camisetas">Camisetas</button>
-            <button class="categoria c-uniformes" data-categoria="uniformes">Uniformes</button>
-        </div>
-
-        <!-- <ul class="galeria-imagenes"></ul> -->
-         <div class="galeria-imagenes">
-         </div>
-    </main>
-
-    <section id="contacto">
-        <div class="img-contacto">
-            <img src="build/img/icons/telefono2.svg" alt="telefono">
-        </div>
-        <div class="contacto contenedor">
-            <div class="contacto-info">
-                <h4>Ponte en contacto</h4>
-                <p>¿Necesitas uniformes, camisas o overoles para tu empresa? Estamos aquí para ayudarte. Contáctanos y te asesoraremos en la elección de las prendas ideales para tu equipo. Ya sea que busques personalización, materiales específicos o un diseño único, nuestro equipo está listo para brindarte la mejor solución.</p>
-            </div>
-            <!-- <button class="boton-contacto">Contacto</button> -->
-            <div class="redes">
-                <a href="https://wa.me/92003852">
-                    <img src="build/img/icons/whatsapp.svg" alt="whatsapp">
-                </a>
-                <a href="https://www.facebook.com/PordisaCA/?locale=es_LA" target="_blank" rel="noopener noreferrer">
-                    <img src="build/img/icons/facebook.svg" alt="facebook">
-                </a>
-                <a href="mailto:agaray@prodisahn.com">
-                    <img src="build/img/icons/mail.svg" alt="correo" target="_blank">
-                </a>
-            </div>
-        </div>
-
-        <div class="modal-form ">
-            <div class="m-form">
-                <form method="post" onsubmit="enviarCorreo(event)">
-                    <div class="form">
-                        <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
-                    </div>
-                    <div class="form">
-                        <input type="text" id="apellido" name="apellido" placeholder="Apellido" required>
-                    </div>
-                    <div class="form">
-                        <input type="email" id="correo" name="correo" placeholder="Correo" required>
-                    </div>
-                    <div class="form">
-                        <input type="tel" id="telefono" name="telefono" placeholder="Teléfono" required>
-                    </div>
-                    <div class="form">
-                        <textarea type="text" id="mensaje" name="mensaje" placeholder="Mensaje" required></textarea>
-                    </div>
-                    <button type="submit">Enviar Solicitud</button>
-                </form>
+                <button class="categoria c-overol" data-categoria="overol">
+                    Overol
+                </button>
+                <button class="categoria c-camisas" data-categoria="camisas">
+                    Camisas
+                </button>
+                <button class="categoria c-chalecos" data-categoria="chalecos">
+                    Chalecos
+                </button>
+                <button
+                    class="categoria c-camisetas"
+                    data-categoria="camisetas"
+                >
+                    Camisetas
+                </button>
+                <button
+                    class="categoria c-uniformes"
+                    data-categoria="uniformes"
+                >
+                    Uniformes
+                </button>
             </div>
 
-            <div class="footer-map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3870.2757762587007!2d-87.18123662519018!3d14.060885790062992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6fbd3300735a07%3A0xce400539d61dd3f4!2sPRODISA!5e0!3m2!1ses-419!2shn!4v1733076539890!5m2!1ses-419!2shn" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <!-- <ul class="galeria-imagenes"></ul> -->
+            <div class="galeria-imagenes"></div>
+        </main>
+
+        <section id="contacto">
+            <div class="img-contacto">
+                <img src="build/img/icons/telefono2.svg" alt="telefono" />
             </div>
-        </div>
-    </section>
-
-    <footer class="footer" id="footer">
-        <div class="footer-contenedor">
-
-            <div class="footer-info">
-                <picture>
-                    <source srcset="build/img/logos/Logo-prodisa_01-03.avif" type="image/avif">
-                    <source srcset="build/img/logos/Logo-prodisa_01-03.webp" type="image/webp">
-                    <img class="logo" src="build/img/logos/Logo-prodisa_01-03.png" alt="Logo de Prodisa" loading="lazy">
-                </picture>
-                <div class="informacion">
-                    <a href="https://maps.app.goo.gl/kR3HKnfHfcVGruXT9" target="_blank">
-                        <img src="build/img/icons/ubicacion-b.svg" alt="ubicación">
-                        <p>Kennedy TGU</p>
+            <div class="contacto contenedor">
+                <div class="contacto-info">
+                    <h4>Ponte en contacto</h4>
+                    <p>
+                        ¿Necesitas uniformes, camisas o overoles para tu
+                        empresa? Estamos aquí para ayudarte. Contáctanos y te
+                        asesoraremos en la elección de las prendas ideales para
+                        tu equipo. Ya sea que busques personalización,
+                        materiales específicos o un diseño único, nuestro equipo
+                        está listo para brindarte la mejor solución.
+                    </p>
+                </div>
+                <!-- <button class="boton-contacto">Contacto</button> -->
+                <div class="redes">
+                    <a href="https://wa.me/92003852">
+                        <img
+                            src="build/img/icons/whatsapp.svg"
+                            alt="whatsapp"
+                        />
+                    </a>
+                    <a
+                        href="https://www.facebook.com/PordisaCA/?locale=es_LA"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <img
+                            src="build/img/icons/facebook.svg"
+                            alt="facebook"
+                        />
                     </a>
                     <a href="mailto:agaray@prodisahn.com">
-                        <img src="build/img/icons/mail-b.svg" alt="correo">
-                        <p>agaray@prodisahn.com</p>
-                    </a>
-                    <a href="https://wa.me/92003852">
-                        <img src="build/img/icons/whatsapp-b.svg" alt="whatsapp">
-                        <p>+504 9872-2078</p>
-                    </a>
-                    <a href="https://www.facebook.com/PordisaCA/?locale=es_LA" target="_blank">
-                        <img src="build/img/icons/facebook-b.svg" alt="facebook">
-                        <p>PRODISA</p>
+                        <img
+                            src="build/img/icons/mail.svg"
+                            alt="correo"
+                            target="_blank"
+                        />
                     </a>
                 </div>
             </div>
-    
-            <div class="footer-map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3870.2757762587007!2d-87.18123662519018!3d14.060885790062992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6fbd3300735a07%3A0xce400539d61dd3f4!2sPRODISA!5e0!3m2!1ses-419!2shn!4v1733076539890!5m2!1ses-419!2shn" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            <div class="modal-form">
+                <div class="m-form">
+                    <form method="post" onsubmit="enviarCorreo(event)">
+                        <div class="form">
+                            <input
+                                type="text"
+                                id="nombre"
+                                name="nombre"
+                                placeholder="Nombre"
+                                required
+                            />
+                        </div>
+                        <div class="form">
+                            <input
+                                type="text"
+                                id="apellido"
+                                name="apellido"
+                                placeholder="Apellido"
+                                required
+                            />
+                        </div>
+                        <div class="form">
+                            <input
+                                type="email"
+                                id="correo"
+                                name="correo"
+                                placeholder="Correo"
+                                required
+                            />
+                        </div>
+                        <div class="form">
+                            <input
+                                type="tel"
+                                id="telefono"
+                                name="telefono"
+                                placeholder="Teléfono"
+                                required
+                            />
+                        </div>
+                        <div class="form">
+                            <textarea
+                                type="text"
+                                id="mensaje"
+                                name="mensaje"
+                                placeholder="Mensaje"
+                                required
+                            ></textarea>
+                        </div>
+                        <button type="submit">Enviar Solicitud</button>
+                    </form>
+                </div>
+
+                <div class="footer-map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3870.2757762587007!2d-87.18123662519018!3d14.060885790062992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6fbd3300735a07%3A0xce400539d61dd3f4!2sPRODISA!5e0!3m2!1ses-419!2shn!4v1733076539890!5m2!1ses-419!2shn"
+                        width="100%"
+                        height="450"
+                        style="border: 0"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                    ></iframe>
+                </div>
             </div>
-    
-            <div class="footer-form">
-                <form method="post" onsubmit="enviarCorreo(event)">
-                    <div class="form">
-                        <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+        </section>
+
+        <footer class="footer" id="footer">
+            <div class="footer-contenedor">
+                <div class="footer-info">
+                    <picture>
+                        <source
+                            srcset="build/img/logos/Logo-prodisa_01-03.avif"
+                            type="image/avif"
+                        />
+                        <source
+                            srcset="build/img/logos/Logo-prodisa_01-03.webp"
+                            type="image/webp"
+                        />
+                        <img
+                            class="logo"
+                            src="build/img/logos/Logo-prodisa_01-03.png"
+                            alt="Logo de Prodisa"
+                            loading="lazy"
+                        />
+                    </picture>
+                    <div class="informacion">
+                        <a
+                            href="https://maps.app.goo.gl/kR3HKnfHfcVGruXT9"
+                            target="_blank"
+                        >
+                            <img
+                                src="build/img/icons/ubicacion-b.svg"
+                                alt="ubicación"
+                            />
+                            <p>Kennedy TGU</p>
+                        </a>
+                        <a href="mailto:agaray@prodisahn.com">
+                            <img
+                                src="build/img/icons/mail-b.svg"
+                                alt="correo"
+                            />
+                            <p>agaray@prodisahn.com</p>
+                        </a>
+                        <a href="https://wa.me/92003852">
+                            <img
+                                src="build/img/icons/whatsapp-b.svg"
+                                alt="whatsapp"
+                            />
+                            <p>+504 9872-2078</p>
+                        </a>
+                        <a
+                            href="https://www.facebook.com/PordisaCA/?locale=es_LA"
+                            target="_blank"
+                        >
+                            <img
+                                src="build/img/icons/facebook-b.svg"
+                                alt="facebook"
+                            />
+                            <p>PRODISA</p>
+                        </a>
                     </div>
-                    <div class="form">
-                        <input type="text" id="apellido" name="apellido" placeholder="Apellido" required>
-                    </div>
-                    <div class="form">
-                        <input type="email" id="correo" name="correo" placeholder="Correo" required>
-                    </div>
-                    <div class="form">
-                        <input type="tel" id="telefono" name="telefono" placeholder="Teléfono" required>
-                    </div>
-                    <div class="form">
-                        <textarea type="text" id="mensaje" name="mensaje" placeholder="Mensaje" required></textarea>
-                    </div>
-                    <button type="submit">Enviar Solicitud</button>
-                </form>
+                </div>
+
+                <div class="footer-map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3870.2757762587007!2d-87.18123662519018!3d14.060885790062992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6fbd3300735a07%3A0xce400539d61dd3f4!2sPRODISA!5e0!3m2!1ses-419!2shn!4v1733076539890!5m2!1ses-419!2shn"
+                        width="100%"
+                        height="450"
+                        style="border: 0"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                    ></iframe>
+                </div>
+
+                <div class="footer-form">
+                    <form method="post" onsubmit="enviarCorreo(event)">
+                        <div class="form">
+                            <input
+                                type="text"
+                                id="nombre"
+                                name="nombre"
+                                placeholder="Nombre"
+                                required
+                            />
+                        </div>
+                        <div class="form">
+                            <input
+                                type="text"
+                                id="apellido"
+                                name="apellido"
+                                placeholder="Apellido"
+                                required
+                            />
+                        </div>
+                        <div class="form">
+                            <input
+                                type="email"
+                                id="correo"
+                                name="correo"
+                                placeholder="Correo"
+                                required
+                            />
+                        </div>
+                        <div class="form">
+                            <input
+                                type="tel"
+                                id="telefono"
+                                name="telefono"
+                                placeholder="Teléfono"
+                                required
+                            />
+                        </div>
+                        <div class="form">
+                            <textarea
+                                type="text"
+                                id="mensaje"
+                                name="mensaje"
+                                placeholder="Mensaje"
+                                required
+                            ></textarea>
+                        </div>
+                        <button type="submit">Enviar Solicitud</button>
+                    </form>
+                </div>
             </div>
-        </div>
-    </footer>
-    <script src="build/js/app.js"></script>
-    <script src="build/js/galeria.js"></script>
-    <script src="build/js/config.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script>
-        (function() {
-        emailjs.init(emailJsConfig.userId);
-    })();
+        </footer>
+        <script src="build/js/app.js"></script>
+        <script src="build/js/galeria.js"></script>
+        <script src="build/js/config.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        <script>
+            (function () {
+                emailjs.init(emailJsConfig.userId);
+            })();
 
-    function enviarCorreo(event) {
-        event.preventDefault();
+            function enviarCorreo(event) {
+                event.preventDefault();
 
-        const templateParams = {
-            nombre: document.getElementById('nombre').value,
-            apellido: document.getElementById('apellido').value,
-            correo: document.getElementById('correo').value,
-            telefono: document.getElementById('telefono').value,
-            mensaje: document.getElementById('mensaje').value,
-        };
+                const templateParams = {
+                    nombre: document.getElementById('nombre').value,
+                    apellido: document.getElementById('apellido').value,
+                    correo: document.getElementById('correo').value,
+                    telefono: document.getElementById('telefono').value,
+                    mensaje: document.getElementById('mensaje').value,
+                };
 
-        emailjs.send(emailJsConfig.serviceId, emailJsConfig.templateId, templateParams)
-            .then(function(response) {
-                alert('Correo enviado correctamente');
-            }, function(error) {
-                alert('Error al enviar el correo: ' + error.text);
-            });
-    }
-    </script>
-</body>
+                emailjs
+                    .send(
+                        emailJsConfig.serviceId,
+                        emailJsConfig.templateId,
+                        templateParams
+                    )
+                    .then(
+                        function (response) {
+                            alert('Correo enviado correctamente');
+                        },
+                        function (error) {
+                            alert('Error al enviar el correo: ' + error.text);
+                        }
+                    );
+            }
+        </script>
+    </body>
 </html>
